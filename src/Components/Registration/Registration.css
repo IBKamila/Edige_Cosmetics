@@ -45,22 +45,29 @@
   position: absolute;
   width: 241px;
   height: 11px;
-  left: 400px;
-  top: 230px;
+  left: 630px;
+  top: 250px;
 }
 .input1 {
   position: absolute;
   width: 241px;
   height: 11px;
-  left: 160px;
+  left: 390px;
   top: 330px;
 }
 .input2 {
   position: absolute;
   width: 241px;
   height: 11px;
-  left: 640px;
-  top: 434px;
+  left: 150px;
+  top: 400px;
+}
+.input3 {
+  position: absolute;
+  width: 241px;
+  height: 11px;
+  left: -90px;
+  top: 480px;
 }
 .btn {
   position: absolute;
