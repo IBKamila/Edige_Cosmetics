@@ -1,0 +1,96 @@
+/* .conteiner_auth {
+  background-color: #f5ece3;
+} */
+.logoName {
+  position: absolute;
+  left: 36.15%;
+  right: 36.15%;
+  top: 11.9%;
+  bottom: 84.92%;
+  display: flex;
+  justify-content: center;
+}
+.titul {
+  display: flex;
+  text-align: center;
+  position: absolute;
+
+  left: 620px;
+  top: 116px;
+
+  font-weight: 400;
+  font-size: 60px;
+  line-height: 110%;
+
+  letter-spacing: -0.03em;
+
+  color: #555555;
+}
+.text {
+  position: absolute;
+  width: 484px;
+  height: 48px;
+  left: 533px;
+  top: 232px;
+
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 150%;
+
+  text-align: center;
+  letter-spacing: -0.02em;
+
+  color: #555555;
+}
+.input {
+  position: absolute;
+  width: 241px;
+  height: 11px;
+  left: 640px;
+  top: 333px;
+}
+.input1 {
+  position: absolute;
+  width: 241px;
+  height: 11px;
+  left: 400px;
+  top: 444px;
+}
+.btn {
+  position: absolute;
+  left: 35.49%;
+  right: 35.49%;
+  height: 10%;
+
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 24px;
+  line-height: 120%;
+  top: 74%;
+
+  background: #eee4da;
+  border-radius: 76px;
+  border-color: #a68665;
+}
+.logo2 {
+  position: absolute;
+  left: 47.15%;
+  right: 53.5%;
+  top: 92.42%;
+  bottom: 14.83%;
+}
+.signin {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 120%;
+  letter-spacing: -0.02em;
+  position: absolute;
+  left: 49.42%;
+  right: 44.2%;
+  top: 90.3%;
+  bottom: 14.68%;
+  color: #ac8f78;
+}
