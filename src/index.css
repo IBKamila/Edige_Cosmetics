@@ -1,3 +1,14 @@
-body {
-  background-color: #f5ece3;
+@import url('https://fonts.googleapis.com/css2?family=PT+Sans&display=swap');
+
+*{
+    font-family: 'PT Sans', sans-serif;
 }
+body {
+    margin: 0;
+    background-color: #f5ece3;
+}
+
+ul {
+    list-style: none;
+}
+
