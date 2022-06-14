@@ -10,7 +10,7 @@ const Auth = () => {
       {/* <div className="logoName">
         <img src={logo} alt="logo" />
       </div> */}
-      <h1 className="titul1">Authorization</h1>
+      <h1 className="titul1pull">Authorization</h1>
       <h2 className="text1">
         Please enter your username and password from your account tolog in, or
         register
