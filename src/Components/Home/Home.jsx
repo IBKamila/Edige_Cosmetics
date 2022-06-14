@@ -1,7 +1,7 @@
 import React from "react";
 import "./Home.css";
-import Rectangle from "../Home/Rectangle.svg";
-import sign from "../Home/sign.png";
+import Rectangle from "../../Media/Rectangle.svg";
+import sign from "../../Media/sign.png";
 
 const Home = () => {
   return (
