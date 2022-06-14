@@ -3,7 +3,6 @@ import { Route, Routes } from "react-router-dom";
 import Auth from "./Components/Auth/Auth";
 import Home from "./Components/Home/Home";
 import Registration from "./Components/Registration/Registration";
-// import { Route, Routes } from "react-router-dom";
 
 const MainRoutes = () => {
   return (
