@@ -2,14 +2,18 @@ import React from "react";
 import "./Home.css";
 import Rectangle from "../../Media/Rectangle.svg";
 import sign from "../../Media/sign.png";
+import Footer from "../Footer/Footer";
+import Navbar from "../Navbar/Navbar";
 
 const Home = () => {
   return (
+    <>
+    <Navbar/>
     <div className="container_home">
       <div className="card_holder">
         <div className="card">
           <img />
-          <h1>Care</h1>
+          <h1 className="h1home">Care</h1>
         </div>
         <div className="card">
           <p className="nameCards">Perfect brows</p>
@@ -26,7 +30,7 @@ const Home = () => {
 
         <div className="card">
           <img />
-          <h1>Care</h1>
+          <h1 className="h1home">Care</h1>
         </div>
         <div className="card">
           <p className="nameCards">Perfect brows</p>
@@ -60,7 +64,7 @@ const Home = () => {
 
       <div className="homeDesc">
         <img src={Rectangle} alt="rectangle" />
-        <h3>
+        <h3 className="h3home">
           Each Boltaeva brand product is truly unique - everything is thought
           out to the smallest detail.
         </h3>
@@ -70,10 +74,12 @@ const Home = () => {
           since the focus of the business is focused on exclusive sales, but not
           on the mass market.
         </p>
-        <h4>FullStack Team</h4>
+        <h4 className="h4home">FullStack Team</h4>
         <img className="sign" src={sign} alt="sign" />
       </div>
     </div>
+    <Footer/>
+    </>
   );
 };
 
