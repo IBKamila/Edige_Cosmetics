@@ -11,10 +11,7 @@ const App = () => {
     <div>
       <BrowserRouter>
         <AuthContextProvider>
-          <Navbar display="none" />
-          <Header/>
            <MainRoutes />
-          <Footer/>
          </AuthContextProvider>
       </BrowserRouter>
     </div>

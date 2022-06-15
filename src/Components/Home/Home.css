@@ -16,31 +16,24 @@
   margin-bottom: 30px;
 }
 
-h1 {
+.h1home {
   position: absolute;
-  /* left: 0%; */
   right: 1350px;
   top: 300px;
-  /* bottom: 0%; */
 
   font-family: "Cera Pro";
   font-style: normal;
   font-weight: 400;
   font-size: 48px;
   line-height: 120%;
-  /* identical to box height, or 58px */
 
   letter-spacing: -0.03em;
 
   color: #555555;
 }
 
-p {
+/* p {
   position: absolute;
-  /* width: 100px;
-  height: 19px; */
-  /* left: 24px; */
-  /* right: 1000px; */
   bottom: 350px;
   padding-right: 200px;
 
@@ -49,18 +42,16 @@ p {
   font-weight: 400;
   font-size: 16px;
   line-height: 120%;
-  /* or 19px */
-
   letter-spacing: -0.02em;
 
   color: #555555;
-}
+} */
 
 .nameCards {
   padding-right: 10px;
 }
 
-h3 {
+.h3home {
   font-family: Cera Pro;
   font-size: 32px;
   font-weight: 400;
@@ -79,8 +70,6 @@ h3 {
   font-weight: 400;
   font-size: 32px;
   line-height: 150%;
-  /* or 48px */
-
   letter-spacing: -0.03em;
 
   color: #555555;
@@ -105,7 +94,7 @@ h3 {
   color: #555555;
 }
 
-h4 {
+.h4home {
   position: absolute;
   width: 160px;
   height: 31px;
@@ -117,8 +106,6 @@ h4 {
   font-weight: 400;
   font-size: 24px;
   line-height: 130%;
-  /* or 31px */
-
   letter-spacing: -0.02em;
 
   color: #555555;
