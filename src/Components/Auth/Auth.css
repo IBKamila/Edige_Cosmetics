@@ -1,7 +1,7 @@
 /* .conteiner_auth {
   background-color: #f5ece3;
 } */
-.logoName {
+/* .logoName {
   position: absolute;
   left: 36.15%;
   right: 36.15%;
@@ -9,14 +9,14 @@
   bottom: 84.92%;
   display: flex;
   justify-content: center;
-}
-.titul {
+} */
+.titul1 {
   display: flex;
   text-align: center;
   position: absolute;
 
-  left: 620px;
-  top: 116px;
+  left: 590px;
+  top: 50px;
 
   font-weight: 400;
   font-size: 60px;
@@ -26,12 +26,12 @@
 
   color: #555555;
 }
-.text {
+.text1 {
   position: absolute;
   width: 484px;
   height: 48px;
   left: 533px;
-  top: 232px;
+  top: 170px;
 
   font-family: "Cera Pro";
   font-style: normal;
@@ -44,19 +44,19 @@
 
   color: #555555;
 }
-.input {
+.inp {
   position: absolute;
   width: 241px;
   height: 11px;
   left: 640px;
-  top: 333px;
+  top: 300px;
 }
-.input1 {
+.inp1 {
   position: absolute;
   width: 241px;
   height: 11px;
   left: 400px;
-  top: 444px;
+  top: 400px;
 }
 .btn {
   position: absolute;
