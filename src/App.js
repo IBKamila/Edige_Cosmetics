@@ -12,10 +12,10 @@ const App = () => {
       <BrowserRouter>
         <AuthContextProvider>
           <Navbar display="none" />
-          <Header/>
-           <MainRoutes />
-          <Footer/>
-         </AuthContextProvider>
+          <Header />
+          <MainRoutes />
+          <Footer />
+        </AuthContextProvider>
       </BrowserRouter>
     </div>
   );
