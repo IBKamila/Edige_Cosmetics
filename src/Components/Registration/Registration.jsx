@@ -1,5 +1,5 @@
 import React from "react";
-import logo from "../Auth/Media/logo1.svg";
+// import logo from "../Auth/Media/logo1.svg";
 import "./Registration.css";
 import { TextField } from "@mui/material";
 import logo2 from "../Auth/Media/Vector.svg";
