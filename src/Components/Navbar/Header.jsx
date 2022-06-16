@@ -29,7 +29,7 @@ const Header = () => {
                 <div className='navIcons'>
                 <span className='navListW textNav'>Contacts</span>
                     <input
-                    className="navIcon search-inp"
+                    className="navIcon search-inpW"
                     type="search"
                     aria-label="Search"
                     />
