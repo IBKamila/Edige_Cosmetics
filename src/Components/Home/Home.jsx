@@ -8,7 +8,7 @@ import Navbar from "../Navbar/Navbar";
 const Home = () => {
   return (
     <>
-      <Navbar />
+      <Navbar location="home" />
       <div className="container_home">
         <div className="card_holder">
           <div className="card">

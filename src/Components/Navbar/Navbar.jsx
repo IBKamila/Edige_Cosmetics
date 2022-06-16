@@ -4,10 +4,11 @@ import user from '../../imgs/user.png'
 import logo from '../../imgs/logo.svg'
 import  './Navbar.css'
 import { NavLink } from 'react-router-dom';
+import Header from "./Header"
 
 const Navbar = (props) => {
-    if (props.display === "none"){
-        return <></>
+    if (props.location === "home"){
+        return <Header/>
     }else{
         return (
             <nav className='navBar'>
@@ -28,7 +29,9 @@ const Navbar = (props) => {
                     type="search"
                     aria-label="Search"
                     />
-                <img className='navIcon' src={cart} alt="cart_icon"/>
+                <NavLink to='/cart'>    
+                    <img className='navIcon' src={cart} alt="cart_icon"/>
+                </NavLink>
                 <img className='navIcon' src={user} alt="user_icon"/>
                 </div>
             </nav>

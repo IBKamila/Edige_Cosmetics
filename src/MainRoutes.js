@@ -5,6 +5,10 @@ import Auth from "./Components/Auth/Auth";
 import EditProduct from "./Components/EditProduct/EditProduct";
 import Home from "./Components/Home/Home";
 import ProductList from "./Components/ProductList/ProductList";
+import About from "./Components/About/About";
+import Cart from "./Components/Cart/Cart";
+import Favorites from "./Components/Favorites/Favorites";
+import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Registration from "./Components/Registration/Registration";
 
 const MainRoutes = () => {
@@ -16,6 +20,10 @@ const MainRoutes = () => {
       <Route path="/list" element={<ProductList />} />
       <Route path="/auth" element={<Auth />} />
       <Route path="/registr" element={<Registration />} />
+      <Route path="/cart" element={<Cart />} />
+      <Route path="/details" element={<ProductDetails />} />
+      <Route path="/favorite" element={<Favorites />} />
+      <Route path="/about" element={<About />} />
     </Routes>
   );
 };
