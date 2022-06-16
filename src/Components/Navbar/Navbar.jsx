@@ -28,7 +28,9 @@ const Navbar = (props) => {
                     type="search"
                     aria-label="Search"
                     />
-                <img className='navIcon' src={cart} alt="cart_icon"/>
+                <NavLink to='/cart'>    
+                    <img className='navIcon' src={cart} alt="cart_icon"/>
+                </NavLink>
                 <img className='navIcon' src={user} alt="user_icon"/>
                 </div>
             </nav>
