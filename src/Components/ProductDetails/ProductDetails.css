@@ -1,47 +1,65 @@
-.pdimg {
-  position: absolute;
-  width: 720px;
-  height: 900px;
-  left: 0px;
-  top: 120px;
-  bottom: 0px;
-
-  border-radius: 0px 0px 6px 0px;
+.detImg{
+    width: 520px;
+    height: 600px;
 }
-.heartlogo {
-  box-sizing: border-box;
 
-  position: absolute;
-  left: 0.13%;
-  right: 91.73%;
-  top: 10.53%;
-  bottom: 15.79%;
+.hrDet{
+    width: 100%;
 }
-.favtext {
-  position: absolute;
-  left: 14%;
-  right: 36.13%;
-  top: 0%;
-  bottom: 10.53%;
 
-  font-weight: 400;
-  font-size: 14px;
-  line-height: 120%;
-  letter-spacing: -0.03em;
-
-  color: #555555;
+.detMain{
+    margin-top: 0;
+    display: flex;
 }
-.milk {
-  position: absolute;
-  width: 407px;
-  height: 53px;
-  left: 883px;
-  top: 338px;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 110%;
 
-  letter-spacing: -0.03em;
+.rightDet{
+    padding-left: 163px;
+    padding-right: 150px;
+    padding-top: 50px;
+}
 
-  color: #555555;
+.favDet{
+    font-size: 14px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.heartDet{
+    margin-right: 11px;
+}
+
+.detTitle{
+    font-size: 48px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.detPrice{
+    color: #555555;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.btnDet{
+    font-size: 16px;
+    color: #555555;
+    cursor: pointer;
+    width: 400px;
+    height: 80px;
+    border-radius: 76px;
+    background-color:#EEE4DA;
+    border: 0;
+}
+
+.btnDet:hover{
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.descDet{
+    color: #555555;
+}
+
+.pDet{
+    font-size: 14px;
+    color: #555555;
 }
