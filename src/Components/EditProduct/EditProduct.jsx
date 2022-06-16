@@ -1,35 +1,21 @@
 import { TextField } from "@mui/material";
-import React, { useContext, useState } from "react";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
 import { productContext } from "../../Context/ProductContext";
-import "./AddProduct.css";
 
-const initObj = {
-  title: "",
-  description: "",
-  price: 0,
-  category: "",
-  img1: "",
-  img2: "",
-  img3: "",
-  img4: "",
-  // comments: [],
-};
+const EditProduct = () => {
+  const { productDetails, getProductsDetails, editProduct } =
+    useContext(productContext);
 
-const AddProduct = () => {
-  const { addProduct } = useContext(productContext);
-  const [inpValues, setInpValues] = useState(initObj);
+  let { id } = useParams();
 
-  // const alertToastify = () => {
-  //   toast.error("Заполните все поля!", {
-  //     position: "top-center",
-  //     autoClose: 5000,
-  //     hideProgressBar: false,
-  //     closeOnClick: true,
-  //     pauseOnHover: false,
-  //     draggable: true,
-  //     progress: undefined,
-  //   });
-  // };
+  const navigate = useNavigate();
+
+  useEffect(() => {
+    getProductsDetails(id);
+  }, []);
+
+  const [inpValues, setInpValues] = useState(productDetails);
 
   const handleChange = (e) => {
     let obj = {
@@ -37,34 +23,17 @@ const AddProduct = () => {
       [e.target.name]: e.target.value,
     };
     setInpValues(obj);
-    console.log(obj);
-  };
-
-  const clearInput = () => {
-    setInpValues(initObj);
   };
 
   const handleSave = (e) => {
-    if (
-      inpValues.title.trim() === "" ||
-      inpValues.description.trim() === "" ||
-      inpValues.img1.trim() === "" ||
-      inpValues.img2.trim() === "" ||
-      inpValues.img3.trim() === "" ||
-      inpValues.img4.trim() === "" ||
-      inpValues.price.toString().trim() === ""
-    ) {
-      // alertToastify();
-      return;
-    }
     e.preventDefault();
-    addProduct(inpValues);
-    clearInput();
+    editProduct(id, inpValues);
+    navigate("/list");
   };
 
   return (
     <div className="containerAdd">
-      <h1 className="titulAdd">Product addition</h1>
+      <h1 className="titulAdd">Product edit</h1>
       <form className="siteBar-inputs" onSubmit={(e) => handleSave(e)}>
         <TextField
           className="inputAdd"
@@ -140,11 +109,11 @@ const AddProduct = () => {
           onChange={(e) => handleChange(e)}
         />
         <button className="save-btn" onClick={handleSave}>
-          Save
+          Save changes
         </button>
       </form>
     </div>
   );
 };
 
-export default AddProduct;
+export default EditProduct;

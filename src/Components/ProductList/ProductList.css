@@ -1,12 +1,12 @@
 /* .container_home {
 } */
-.card_holder {
+.prodList {
   display: flex;
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
-.card {
+.cards {
   background-color: #ac8f78;
   height: 430px;
   width: 310px;
@@ -16,7 +16,7 @@
   margin-bottom: 30px;
 }
 
-.h1home {
+.card-text {
   position: absolute;
   right: 1350px;
   top: 300px;
@@ -33,21 +33,21 @@
 }
 
 /* p {
-  position: absolute;
-  bottom: 350px;
-  padding-right: 200px;
+    position: absolute;
+    bottom: 350px;
+    padding-right: 200px;
+  
+    font-family: "Cera Pro";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 120%;
+    letter-spacing: -0.02em;
+  
+    color: #555555;
+  } */
 
-  font-family: "Cera Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 120%;
-  letter-spacing: -0.02em;
-
-  color: #555555;
-} */
-
-.nameCards {
+/* .nameCards {
   padding-right: 10px;
 }
 
@@ -88,13 +88,13 @@
   font-size: 18px;
   line-height: 180%;
   /* or 32px */
-
+/* 
   letter-spacing: -0.02em;
 
   color: #555555;
-}
+} */
 
-.h4home {
+/* .h4home {
   position: absolute;
   width: 160px;
   height: 31px;
@@ -115,8 +115,8 @@
   width: 140px;
   height: 66px;
   left: 1072px;
-  top: 1980px;
+  top: 1980px;  */
 
-  /* background: linear-gradient(0deg, #ac8f78, #ac8f78);
-  background-blend-mode: lighten, normal; */
-}
+/* background: linear-gradient(0deg, #ac8f78, #ac8f78);
+    background-blend-mode: lighten, normal; */
+/* } */
