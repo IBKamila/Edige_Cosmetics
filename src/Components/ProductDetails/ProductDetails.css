@@ -1,0 +1,66 @@
+
+.detImg{
+    width: 520px;
+    height: 600px;
+}
+
+.hrDet{
+    width: 100%;
+}
+
+.detMain{
+    margin-top: 0;
+    display: flex;
+}
+
+.rightDet{
+    padding-left: 163px;
+    padding-right: 150px;
+    padding-top: 50px;
+}
+
+.favDet{
+    font-size: 14px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.heartDet{
+    margin-right: 11px;
+}
+
+.detTitle{
+    font-size: 48px;
+    font-weight: 400;
+    color: #555555;
+}
+
+.detPrice{
+    color: #555555;
+    font-size: 32px;
+    margin-bottom: 30px;
+}
+
+.btnDet{
+    font-size: 16px;
+    color: #555555;
+    cursor: pointer;
+    width: 400px;
+    height: 80px;
+    border-radius: 76px;
+    background-color:#EEE4DA;
+    border: 0;
+}
+
+.btnDet:hover{
+    box-shadow: 0 0 10px 5px rgba(221, 221, 221, 1);
+}
+
+.descDet{
+    color: #555555;
+}
+
+.pDet{
+    font-size: 14px;
+    color: #555555;
+}

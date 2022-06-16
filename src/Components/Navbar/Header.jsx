@@ -1,19 +1,25 @@
 import React from 'react';
-import cart from '../../imgs/cart.png'
-import user from '../../imgs/user.png'
-import logo from '../../imgs/logo.svg'
+import cart from '../../imgs/cartWhite.png'
+import user from '../../imgs/userWhite.png'
+import logo from '../../imgs/logoWhite.svg'
+import "./Header.css"
 import { NavLink } from 'react-router-dom';
-import Carousel from 'react-bootstrap/Carousel';
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Autoplay, Pagination, Navigation } from "swiper";
+import "swiper/css/bundle";
 
 
 const Header = () => {
     return (
-        <div>
-        <nav className='navBar'>
+        <div className='headerMain'>
+        <nav className='navHead'>
                 <div className='navLists'>
-                    <span className='navList'>Catalog</span>
-                    <span className='navList'>About</span>
-                    <span className='navList'>Delivery</span>
+                    <span className='navListW'>Catalog</span>
+                    <span className='navListW'>About</span>
+                    <span className='navListW'>Delivery</span>
                 </div>
                 <div className='navLogo'>
                     <NavLink to="/">
@@ -21,53 +27,36 @@ const Header = () => {
                     </NavLink>
                 </div>
                 <div className='navIcons'>
-                <span className='navList textNav'>Contacts</span>
+                <span className='navListW textNav'>Contacts</span>
                     <input
                     className="navIcon search-inp"
                     type="search"
                     aria-label="Search"
                     />
-                <img className='navIcon' src={cart} alt="cart_icon"/>
+                <NavLink to="/cart"> 
+                  <img className='navIcon' src={cart} alt="cart_icon"/>
+                </NavLink>  
                 <img className='navIcon' src={user} alt="user_icon"/>
                 </div>
         </nav>
-        <Carousel>
-        <Carousel.Item interval={1000}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=First slide&bg=373940"
-            alt="First slide"
-          />
-          <Carousel.Caption>
-            <h3>First slide label</h3>
-            <p>Nulla vitae elit libero, a pharetra augue mollis interdum.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item interval={500}>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Second slide&bg=282c34"
-            alt="Second slide"
-          />
-          <Carousel.Caption>
-            <h3>Second slide label</h3>
-            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.</p>
-          </Carousel.Caption>
-        </Carousel.Item>
-        <Carousel.Item>
-          <img
-            className="d-block w-100"
-            src="holder.js/800x400?text=Third slide&bg=20232a"
-            alt="Third slide"
-          />
-          <Carousel.Caption>
-            <h3>Third slide label</h3>
-            <p>
-              Praesent commodo cursus magna, vel scelerisque nisl consectetur.
-            </p>
-          </Carousel.Caption>
-        </Carousel.Item>
-      </Carousel>
+        <Swiper
+        spaceBetween={30}
+        centeredSlides={true}
+        autoplay={{
+          delay: 2500,
+          disableOnInteraction: false,
+        }}
+        pagination={{
+          clickable: true,
+        }}
+        navigation={true}
+        modules={[Autoplay, Pagination, Navigation]}
+        className="mySwiper"
+      >
+        <SwiperSlide className='swiper1'>Capsule Collection</SwiperSlide>
+        <SwiperSlide className='swiper2'>Slide 2</SwiperSlide>
+        <SwiperSlide className='swiper3'>Slide 3</SwiperSlide>
+      </Swiper>
       </div>    
     );
 };

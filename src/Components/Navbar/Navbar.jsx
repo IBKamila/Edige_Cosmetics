@@ -4,10 +4,11 @@ import user from '../../imgs/user.png'
 import logo from '../../imgs/logo.svg'
 import  './Navbar.css'
 import { NavLink } from 'react-router-dom';
+import Header from "./Header"
 
 const Navbar = (props) => {
-    if (props.display === "none"){
-        return <></>
+    if (props.location === "home"){
+        return <Header/>
     }else{
         return (
             <nav className='navBar'>

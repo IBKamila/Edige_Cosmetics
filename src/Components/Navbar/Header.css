@@ -1,7 +1,9 @@
-.navBar{
-    margin: 0;
-    background-color: #F5ECE3;
-    width: auto;
+.navHead{
+    position: absolute;
+    top: 0;
+    z-index: 100;
+    background-color: #f5ece300;
+    width: 100%;
     height: 100px;
     display: flex;
 }
@@ -13,10 +15,10 @@
 
 }
 
-.navList{
+.navListW{
     font-weight: 400;
     height: 17px;
-    color: #555555;
+    color: #fff;
     margin-left: 50px;
 }
 
@@ -43,20 +45,74 @@
 
 .search-inp {
     cursor: pointer;
-    border: #ffff;
+    border: rgba(255, 255, 255, 0);
     border-radius: 150px;
     color: #000000;
     height: 26px;
     width: 26px;
-    background: #F5ECE3 url(../../imgs/search.png) no-repeat 10px center;
-    -webkit-transition: all 0.5s;
-    -moz-transition: all 0.5s;
-    transition: all 0.5s;
+    background: #f5ece300 url(../../imgs/searchWhite.png) no-repeat 10px center;
+    -webkit-transition: all 1s;
+    -moz-transition: all 1s;
+    transition: all 1s;
 }
 
 .search-inp:focus {
     cursor:auto;
     border: 0;
-    background: #F5ECE3;
+    background: #f5ece36c;
     width: 200px;
+}
+
+.swiper {
+    color: #fff;
+    position: absolute;
+    top: 0;
+    z-index: 0;
+    width: 100%;
+    height: 700px;
+  }
+  
+  .swiper-slide {
+    text-align: center;
+    font-size: 48px;
+    
+  
+    /* Center slide text vertically */
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: -webkit-flex;
+    display: flex;
+    -webkit-box-pack: center;
+    -ms-flex-pack: center;
+    -webkit-justify-content: center;
+    justify-content: center;
+    -webkit-box-align: center;
+    -ms-flex-align: center;
+    -webkit-align-items: center;
+    align-items: center;
+    
+  }
+  
+  .swiper-slide img {
+    display: block;
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+.headerMain{
+    position: relative;
+    margin-bottom: 5%;
+}
+
+.swiper1{
+    background-image: url('../../imgs/header.png');
+}
+
+.swiper2{
+    background-image: url('../../imgs/header4.jpg');
+}
+
+.swiper3{
+    background-image: url('../../imgs/header5.jpg');
 }
