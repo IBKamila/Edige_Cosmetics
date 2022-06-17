@@ -1,35 +1,76 @@
-/* .container_home {
-} */
-.card_holder {
-  display: flex;
-  justify-content: space-evenly;
-  flex-wrap: wrap;
+.container_home{
+  width: 95%;
+  margin-left: 2.5%;
 }
 
-.card {
-  background-color: #ac8f78;
-  height: 430px;
-  width: 310px;
-  left: 0px;
-  top: 0px;
+.card_holder {
+  margin-bottom: 2%;
+  width: 100%;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.card_home {
+  background-color: #EEE4DA;
+  height: 400px;
+  width: 300px;
   border-radius: 6px;
-  margin-bottom: 30px;
+  position: relative;
+}
+
+.cardProd_home:hover{
+  cursor: pointer;
+  box-shadow: 1px -2px 24px -11px rgba(86, 57, 41, 0.6) inset;
+}
+
+.home_cat:hover{
+  cursor: pointer;
+  opacity: 70%;
 }
 
 .h1home {
+  margin: 0;
   position: absolute;
-  right: 1350px;
-  top: 300px;
-
-  font-family: "Cera Pro";
-  font-style: normal;
   font-weight: 400;
   font-size: 48px;
-  line-height: 120%;
-
-  letter-spacing: -0.03em;
-
   color: #555555;
+  z-index: 2;
+  left: 30px;
+  bottom: 20px;
+}
+
+.h1homeProd{
+  color: #555555;
+  font-size: 16px;
+  font-weight: 400;
+  position: absolute;
+  z-index: 2;
+  bottom: 5px;
+  left: 10px;
+}
+
+.h1homePrice{
+  position: absolute;
+  color: #555555;
+  font-size: 18px;
+  font-weight: 400;
+  z-index: 2;
+  bottom: 5px;
+  right: 10px;
+}
+
+.card_img{
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  z-index: 1;
+}
+
+.card_imgP{
+  position: absolute;
+  z-index: 1;
+  left: auto;
+  right: auto;
 }
 
 .nameCards {
