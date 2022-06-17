@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import cart1 from "../../Media/bag-21.svg";
 import fav3 from "../../Media/heart3.svg";
+import { cartContext } from "../../Context/CartContext";
 
 const ProductList = () => {
   const { getProducts, products } = useContext(productContext);
@@ -13,7 +14,7 @@ const ProductList = () => {
     getProducts();
   }, []);
 
-  // const { addProductToCart } = useContext(cartContext);
+  const { addProductToCatt } = useContext(cartContext);
   //   const { addProductToFav } = useContext(favContext);
 
   //   const [searchParams, setSearchParams] = useSearchParams();
