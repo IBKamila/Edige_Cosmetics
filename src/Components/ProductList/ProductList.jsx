@@ -11,7 +11,7 @@ const ProductList = () => {
     getProducts();
   }, []);
 
-  //   const { addProductToCart } = useContext(cartContext);
+  // const { addProductToCart } = useContext(cartContext);
   //   const { addProductToFav } = useContext(favContext);
 
   //   const [searchParams, setSearchParams] = useSearchParams();
