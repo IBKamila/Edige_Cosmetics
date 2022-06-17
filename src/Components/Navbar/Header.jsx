@@ -17,7 +17,9 @@ const Header = () => {
         <div className='headerMain'>
         <nav className='navHead'>
                 <div className='navLists'>
-                    <span className='navListW'>Catalog</span>
+                    <NavLink to='/list'>
+                      <span className='navListW'>Catalog</span>
+                    </NavLink>
                     <span className='navListW'>About</span>
                     <span className='navListW'>Delivery</span>
                 </div>

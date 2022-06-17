@@ -5,6 +5,7 @@ import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import cart1 from "../../Media/bag-21.svg";
 import fav3 from "../../Media/heart3.svg";
+import Filter from "../Filter/Filter";
 
 const ProductList = () => {
   const { getProducts, products } = useContext(productContext);
@@ -65,6 +66,7 @@ const ProductList = () => {
     //   </div>
     <>
       <Navbar />
+      <Filter/>
       <div className="prodList">
         {/* <div className="sideNav">
         <Filter
