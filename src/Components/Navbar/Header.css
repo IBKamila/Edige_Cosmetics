@@ -56,7 +56,7 @@
     transition: all 1s;
 }
 
-.search-inp:focus {
+.search-inpW:focus {
     cursor:auto;
     border: 0;
     background: #f5ece36c;

@@ -6,16 +6,16 @@ import Navbar from "../Navbar/Navbar";
 import cart1 from "../../Media/bag-21.svg";
 import fav3 from "../../Media/heart3.svg";
 import { cartContext } from "../../Context/CartContext";
+import { favContext } from "../../Context/FavContext";
 
 const ProductList = () => {
   const { getProducts, products } = useContext(productContext);
+  const { addProductToCart } = useContext(cartContext);
+  const { addProductToFav } = useContext(favContext);
 
   useEffect(() => {
     getProducts();
   }, []);
-
-  const { addProductToCatt } = useContext(cartContext);
-  //   const { addProductToFav } = useContext(favContext);
 
   //   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -96,7 +96,7 @@ const ProductList = () => {
                 <img
                   className="incFav"
                   src={fav3}
-                  // onClick={() => addProductToFav(item)}
+                  onClick={() => addProductToFav(item)}
                 ></img>
 
                 <img className="incSale" src="" alt="card-tag" />
@@ -105,7 +105,7 @@ const ProductList = () => {
               <img
                 className="incCart"
                 src={cart1}
-                // onClick={() => addProductToCart(item)}
+                onClick={() => addProductToCart(item)}
               ></img>
             </div>
           ))}
