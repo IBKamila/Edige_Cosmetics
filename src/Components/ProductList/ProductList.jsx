@@ -3,6 +3,8 @@ import { NavLink } from "react-router-dom";
 import { productContext } from "../../Context/ProductContext";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
+import cart1 from "../../Media/bag-21.svg";
+import fav3 from "../../Media/heart3.svg";
 
 const ProductList = () => {
   const { getProducts, products } = useContext(productContext);
@@ -11,7 +13,7 @@ const ProductList = () => {
     getProducts();
   }, []);
 
-  //   const { addProductToCart } = useContext(cartContext);
+  // const { addProductToCart } = useContext(cartContext);
   //   const { addProductToFav } = useContext(favContext);
 
   //   const [searchParams, setSearchParams] = useSearchParams();
@@ -81,7 +83,7 @@ const ProductList = () => {
             <div className="card">
               <div>
                 <NavLink to={`/details/${item.id}`}>
-                  {/* <img className="imgList" src={item.img} alt="card" /> */}
+                  <img className="imgList" src={item.img} alt="card" />
                 </NavLink>
               </div>
 
@@ -90,20 +92,20 @@ const ProductList = () => {
                 <p className="card-desc">{item.description}</p>
               </div>
               <div className="card-price">
-                {/* <img
-          className="incFav"
-          src={fav3}
-          onClick={() => addProductToFav(item)}
-       ></img> */}
-                {/* <img
-          className="incCart"
-           src={cart1}
-           onClick={() => addProductToCart(item)}
-         ></img> */}
+                <img
+                  className="incFav"
+                  src={fav3}
+                  // onClick={() => addProductToFav(item)}
+                ></img>
 
                 <img className="incSale" src="" alt="card-tag" />
                 <span className="card-price2">{item.price}$</span>
               </div>
+              <img
+                className="incCart"
+                src={cart1}
+                // onClick={() => addProductToCart(item)}
+              ></img>
             </div>
           ))}
         </div>
