@@ -19,8 +19,6 @@
     margin-right: 20px;
 }
 
-
-
 .cartCount{
     color: #555555;
     font-size: 14px;
@@ -110,4 +108,32 @@
 
 .cartInp:focus{
     border-color: antiquewhite;
+}
+
+.cartHR2{
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 6%;
+}
+
+.cartOrd{
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.cartTot{
+    color: #555555;
+    font-size: 32px;
+    font-weight: 400;
+}
+
+.cartBtn{
+    color: #555555;
+    background-color: #EEE4DA;
+    cursor: pointer;
+    border-radius: 66px;
+    width: 400px;
+    font-size: 20px;
+    border: #EEE4DA;
+    box-shadow: 0px 5px 23px -5px rgba(34, 60, 80, 0.6);
 }

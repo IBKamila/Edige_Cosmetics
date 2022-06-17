@@ -1,0 +1,177 @@
+.hrabout {
+  width: 100%;
+}
+.conteiner_about {
+  margin-left: 23%;
+  margin-right: 13%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+.titleabout {
+  width: 323px;
+  height: 53px;
+  /* left: 117px;
+  top: 303px; */
+
+  font-style: normal;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 110%;
+
+  letter-spacing: -0.03em;
+
+  color: #555555;
+}
+#text1 {
+  width: 850px;
+  height: 0px;
+  left: 317px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+
+  letter-spacing: -0.02em;
+
+  color: #555555;
+}
+.imgabout {
+  width: 809px;
+  height: 420px;
+  margin-top: 250px;
+}
+.imgabout2 {
+  margin-top: 50px;
+  width: 850px;
+  height: auto;
+  left: 317px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+
+  letter-spacing: -0.02em;
+
+  color: #555555;
+}
+.cardnumber {
+  display: flex;
+  justify-content: space-evenly;
+  flex-wrap: wrap;
+  width: 80%;
+  margin-left: auto;
+  margin-right: auto;
+}
+.cardnum {
+  height: 170px;
+  width: 300px;
+  left: 0px;
+  top: 0px;
+  border-radius: 6px;
+  margin-bottom: 30px;
+}
+.num {
+  display: flex;
+  justify-content: center;
+
+  font-weight: 400;
+  font-size: 96px;
+  line-height: 110%;
+
+  letter-spacing: -0.03em;
+
+  color: #e3dad0;
+  margin: 0px;
+}
+.tn {
+  display: flex;
+  justify-content: center;
+  font-weight: 400;
+  font-size: 20px;
+  margin-bottom: 10px;
+
+  letter-spacing: -0.02em;
+
+  color: #555555;
+}
+.imgabout3 {
+  width: 850px;
+  height: auto;
+  left: 317px;
+
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+
+  letter-spacing: -0.02em;
+
+  color: #555555;
+}
+.text4 {
+  width: 835px;
+  height: 96px;
+  left: 317px;
+  top: 2502px;
+
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 150%;
+  color: #555555;
+
+  letter-spacing: -0.03em;
+}
+.text5 {
+  width: 696px;
+  height: 108px;
+  left: 77px;
+  top: 2692px;
+  margin-left: 45px;
+
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 180%;
+
+  letter-spacing: -0.02em;
+
+  color: #555555;
+}
+.conteiner_bio {
+  width: 809px;
+  height: auto;
+  left: 317px;
+  top: 2640px;
+  background: linear-gradient(0deg, #eee4da, #eee4da);
+  margin-bottom: 70px;
+}
+.photolico {
+  width: 74px;
+  height: 74px;
+  margin-left: 45px;
+  top: 2829px;
+}
+.tkn {
+  justify-content: center;
+  margin-top: 32px;
+  margin-left: 40px;
+  font-weight: 400;
+  font-size: 13px;
+  line-height: 130%;
+  letter-spacing: -0.02em;
+
+  color: #555555;
+}
+.podpis {
+  display: flex;
+}
+.sign2 {
+  width: 150px;
+  height: 66px;
+  left: 150px;
+  top: 10px;
+  margin-left: 200px;
+}

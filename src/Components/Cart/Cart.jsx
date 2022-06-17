@@ -2,6 +2,7 @@ import React from 'react';
 import "./Cart.css"
 import fill from "../../imgs/fill.png"
 import x from "../../imgs/+.png"
+import v from "../../imgs/vector.png"
 import mask from "../../imgs/Mask.png"
 import Navbar from '../Navbar/Navbar';
 import Footer from '../Footer/Footer';
@@ -32,7 +33,7 @@ const Cart = () => {
                     </div>
                     <div className='cartCard'>
                         <div className='cartImg'>
-                            <img src={mask} alt="" />
+                            <img src={mask} alt="car" />
                         </div>
                         <div className='cartInfo'>
                             <h1 className='cardTitle'>Title</h1>
@@ -43,6 +44,13 @@ const Cart = () => {
                             <img className='x_cart' src={x} alt="x_img" />
                             <span className='price_cart'>54 €</span>
                         </div>
+                    </div>
+                    <hr className='cartHR2' />
+                    <div className='cartOrd'>
+                        <div className='cartTP'>
+                            <h2 className='cartTot'>Total: 108 €</h2>
+                        </div>
+                        <button className='cartBtn'>Place an order <img src={v}/> </button>
                     </div>
                 </div>
             </div>
