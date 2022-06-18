@@ -8,10 +8,10 @@ const initObj = {
   description: "",
   price: 0,
   category: "",
-  img1: "",
-  img2: "",
-  img3: "",
-  img4: "",
+  // img1: "",
+  // img2: "",
+  // img3: "",
+  // img4: "",
   // comments: [],
 };
 
@@ -48,10 +48,10 @@ const AddProduct = () => {
     if (
       inpValues.title.trim() === "" ||
       inpValues.description.trim() === "" ||
-      inpValues.img1.trim() === "" ||
-      inpValues.img2.trim() === "" ||
-      inpValues.img3.trim() === "" ||
-      inpValues.img4.trim() === "" ||
+      // inpValues.img1.trim() === "" ||
+      // inpValues.img2.trim() === "" ||
+      // inpValues.img3.trim() === "" ||
+      // inpValues.img4.trim() === "" ||
       inpValues.price.toString().trim() === ""
     ) {
       // alertToastify();
