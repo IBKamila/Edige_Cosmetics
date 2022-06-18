@@ -1,12 +1,15 @@
-import React from "react";
+import React, { useContext } from "react";
 import cart from "../../imgs/cart.png";
 import user from "../../imgs/user.png";
 import logo from "../../imgs/logo.svg";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import Header from "./Header";
+import { cartContext } from "../../Context/CartContext";
 
 const Navbar = (props) => {
+  const { cartLength } = useContext(cartContext);
+
   if (props.location === "home") {
     return <Header />;
   } else {
@@ -33,8 +36,17 @@ const Navbar = (props) => {
             type="search"
             aria-label="Search"
           />
+
+          {/* <NavLink to="/fav">
+            <Badge badgeContent={favLength} color="error">
+              <img src={fav} alt="cart" />
+            </Badge>
+          </NavLink> */}
+
           <NavLink to="/cart">
+            {/* <Badge badgeContent={cartLength} color="error"> */}
             <img className="navIcon" src={cart} alt="cart_icon" />
+            {/* </Badge> */}
           </NavLink>
           <img className="navIcon" src={user} alt="user_icon" />
         </div>

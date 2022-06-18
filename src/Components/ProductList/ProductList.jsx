@@ -6,13 +6,20 @@ import Navbar from "../Navbar/Navbar";
 import cart1 from "../../Media/bag-21.svg";
 import fav3 from "../../Media/heart3.svg";
 import { Button } from "@mui/material";
+import { cartContext } from "../../Context/CartContext";
+import { favContext } from "../../Context/FavContext";
+import Filter from "../Filter/Filter";
 
 const ProductList = () => {
   const { getProducts, products, deleteProduct, editProduct } =
     useContext(productContext);
+    const { addProductToCart } = useContext(cartContext);
+  const { addProductToFav } = useContext(favContext);
 
   const navigate = useNavigate();
   const { id } = useParams();
+
+
 
   useEffect(() => {
     getProducts();
@@ -78,6 +85,7 @@ const ProductList = () => {
     //   </div>
     <>
       <Navbar />
+      <Filter/>
       <div className="prodList">
         {/* <div className="sideNav">
         <Filter
@@ -108,7 +116,7 @@ const ProductList = () => {
                 <img
                   className="incFav"
                   src={fav3}
-                  // onClick={() => addProductToFav(item)}
+                  onClick={() => addProductToFav(item)}
                 ></img>
 
                 <img className="incSale" src="" alt="card-tag" />
@@ -117,7 +125,7 @@ const ProductList = () => {
               <img
                 className="incCart"
                 src={cart1}
-                // onClick={() => addProductToCart(item)}
+                onClick={() => addProductToCart(item)}
               ></img>
               <Button onClick={() => handleDelete(item.id)}>delete</Button>
               <NavLink to={`/edit/${item.id}`}>

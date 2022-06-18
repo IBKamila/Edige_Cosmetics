@@ -7,9 +7,9 @@ import Home from "./Components/Home/Home";
 import ProductList from "./Components/ProductList/ProductList";
 import About from "./Components/About/About";
 import Cart from "./Components/Cart/Cart";
-import Favorites from "./Components/Favorites/Favorites";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Registration from "./Components/Registration/Registration";
+import Fav from "./Components/Favorites/Fav";
 
 const MainRoutes = () => {
   return (
