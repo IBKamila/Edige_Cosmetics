@@ -10,6 +10,7 @@ const API = "https://cosmeticshackathon.herokuapp.com/";
 const INIT_STATE = {
   products: [],
   productDetails: {},
+  productToEdit: {},
 };
 
 const reducer = (state = INIT_STATE, action) => {
@@ -18,6 +19,9 @@ const reducer = (state = INIT_STATE, action) => {
       return { ...state, products: action.payload };
     case "GET_PRODUCTS_DETAILS":
       return { ...state, productDetails: action.payload };
+    case "EDIT_PRODUCT":
+      return { ...state, productToEdit: action.payload };
+
     default:
       return state;
   }
@@ -45,7 +49,6 @@ const ProductContextProvider = ({ children }) => {
       payload: data.results,
     });
   };
-  console.log(productDetails);
 
   const addProduct = async (newProduct) => {
     let token = JSON.parse(localStorage.getItem("token"));
