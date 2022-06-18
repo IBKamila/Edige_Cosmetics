@@ -16,6 +16,7 @@ const EditProduct = () => {
   }, []);
 
   const [inpValues, setInpValues] = useState(productDetails);
+  console.log(productDetails);
 
   const handleChange = (e) => {
     let obj = {
@@ -108,7 +109,8 @@ const EditProduct = () => {
           name="img4"
           onChange={(e) => handleChange(e)}
         />
-        <button className="save-btn" onClick={handleSave}>
+        <h1>gfdrtgsd</h1>
+        <button className="save-btn" onClick={() => handleSave(inpValues)}>
           Save changes
         </button>
       </form>

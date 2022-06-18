@@ -5,7 +5,7 @@ import { useLocation, useNavigate } from "react-router-dom";
 export const productContext = createContext();
 
 // const API = "http://localhost:8000/products";
-const API = "http://18.212.64.144/";
+const API = "https://cosmeticshackathon.herokuapp.com/";
 
 const INIT_STATE = {
   products: [],
@@ -39,12 +39,13 @@ const ProductContextProvider = ({ children }) => {
   };
 
   const getProductsDetails = async (id) => {
-    const { data } = await axios.get(`${API}products/${id}`); // /products/{id}
+    const { data } = await axios.get(`${API}products/${id}`);
     dispatch({
       type: "GET_PRODUCTS_DETAILS",
       payload: data.results,
     });
   };
+  console.log(productDetails);
 
   const addProduct = async (newProduct) => {
     let token = JSON.parse(localStorage.getItem("token"));
@@ -59,17 +60,20 @@ const ProductContextProvider = ({ children }) => {
 
     let newProduct2 = new FormData();
     newProduct2.append("title", newProduct.title);
-    newProduct2.append("description", newProduct.description);
+    // newProduct2.append("description", newProduct.description);
     newProduct2.append("price", newProduct.price);
     newProduct2.append("category", newProduct.category);
-    newProduct2.append("img1", newProduct.img1);
-    newProduct2.append("img2", newProduct.img2);
-    newProduct2.append("img3", newProduct.img3);
-    newProduct2.append("img4", newProduct.img4);
-
-    await axios.post(`${API}products/create/`, newProduct2, config);
-    getProducts();
-    navigate("/list");
+    // newProduct2.append("img1", newProduct.img1);
+    // newProduct2.append("img2", newProduct.img2);
+    // newProduct2.append("img3", newProduct.img3);
+    // newProduct2.append("img4", newProduct.img4);
+    try {
+      await axios.post(`${API}products/create/`, newProduct2, config);
+      getProducts();
+      navigate("/list");
+    } catch (error) {
+      console.log(error);
+    }
   };
 
   //   !коменты
@@ -92,15 +96,42 @@ const ProductContextProvider = ({ children }) => {
     getProducts();
   };
 
-  //   const editProduct = async (id, prodObj) => {
-  //     let { data } = await axios(`${URL}/products/${id}`);
-  //     dispatch({
-  //       type: "EDIT_PRODUCT",
-  //       payload: data,
-  //     });
-  // await axios.patch(`${API}/${id}`, prodObj);
-  //     getProducts();
+  const editProduct = async (id, prodObj) => {
+    // let { data } = await axios.get(`${API}products/update/${id}`);
+    // dispatch({
+    //   type: "EDIT_PRODUCT",
+    //   payload: data,
+    // });
+    await axios.patch(`${API}products/update/${id}`, prodObj);
+    getProducts();
+  };
+
+  // const editProduct = async (newProduct) => {
+  //   let token = JSON.parse(localStorage.getItem("token"));
+
+  //   const config = {
+  //     headers: {
+  //       "Content-Type": "multipart/form-data",
+  //       Authorization: `Bearer ${token.access}`,
+  //     },
   //   };
+
+  //   let newProduct2 = new FormData();
+  //   newProduct2.append("title", newProduct.title);
+  // newProduct2.append("description", newProduct.description);
+  // newProduct2.append("price", newProduct.price);
+  // newProduct2.append("category", newProduct.category);
+  // newProduct2.append("img1", newProduct.img1);
+  // newProduct2.append("img2", newProduct.img2);
+  // newProduct2.append("img3", newProduct.img3);
+  // newProduct2.append("img4", newProduct.img4);
+
+  // let id = newProduct2.get("id");
+
+  // await axios.patch(`${API}products/update/${id}/`, newProduct2, config);
+  // getProducts();
+  // navigate('/store')
+  // };
   //   const saveProduct = async (newProduct) => {
   //     let access = localStorage.getItem("access");
   //     let config = {
@@ -122,12 +153,14 @@ const ProductContextProvider = ({ children }) => {
       value={{
         products: state.products,
         productDetails: state.productDetails,
+        productToEdit: state.productToEdit,
+
         addProduct,
         // addComments,
         getProducts,
         getProductsDetails,
         deleteProduct,
-        // editProduct,
+        editProduct,
         // saveProduct,
       }}
     >
