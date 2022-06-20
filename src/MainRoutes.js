@@ -22,7 +22,7 @@ const MainRoutes = () => {
       <Route path="/registr" element={<Registration />} />
       <Route path="/cart" element={<Cart />} />
       <Route path="/details/:id" element={<ProductDetails />} />
-      <Route path="/favorite" element={<Favorites />} />
+      <Route path="/favorite" element={<Fav />} />
       <Route path="/about" element={<About />} />
     </Routes>
   );

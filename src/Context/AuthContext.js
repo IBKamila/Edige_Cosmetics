@@ -48,13 +48,10 @@ const AuthContextProvider = ({ children }) => {
     let formData = new FormData();
     formData.append("email", email);
     formData.append("password", password);
-    // formData.append("password_confirm", password_confirm);
-    console.log(formData);
+
     try {
       let res = await axios.post(`${API}account/api/login/`, formData, config);
       localStorage.setItem("token", JSON.stringify(res.data));
-      // localStorage.setItem("username", username);
-      // setUser(username);
       navigate("/");
     } catch (error) {
       setError("error occured");
