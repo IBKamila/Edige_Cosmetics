@@ -67,7 +67,7 @@ const ProductList = () => {
     //   </div>
     <>
       <Navbar />
-      <Filter/>
+      <Filter />
       <div className="prodList">
         {/* <div className="sideNav">
         <Filter

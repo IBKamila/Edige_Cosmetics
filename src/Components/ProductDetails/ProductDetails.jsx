@@ -1,12 +1,17 @@
-import React from "react";
+import React, { useContext } from "react";
 import pdimg from "../../Media/Rectangle 1.png";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import heart from "../../Media/Fill-18.svg";
 import cart from "../../imgs/cart.png";
 import "./ProductDetails.css";
+import { cartContext } from "../../Context/CartContext";
+import { favContext } from "../../Context/FavContext";
 
 const ProductDetails = () => {
+  const { addProductToCart } = useContext(cartContext);
+  const { addProductToFav } = useContext(favContext);
+
   return (
     <>
       <Navbar />
@@ -17,13 +22,22 @@ const ProductDetails = () => {
         </div>
         <div className="rightDet">
           <span className="favDet">
-            <img className="heartDet" src={heart} alt="heart_img" />
+            <img
+              // onClick={() => addProductToFav(item)}
+              className="heartDet"
+              src={heart}
+              alt="heart_img"
+            />
             Add to favorites
           </span>
           <h1 className="detTitle">Title</h1>
           <div className="detPrice">54 €</div>
-          <button className="btnDet">
-            <img src={cart} alt="cart_img" /> Add to shopping cart
+          <button
+            // onClick={() => addProductToCart(item)}
+            className="btnDet"
+          >
+            <img src={cart} alt="cart_img" />
+            Add to shopping cart
           </button>
           <h3 className="descDet">Description</h3>
           <p className="pDet">

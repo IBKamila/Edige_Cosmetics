@@ -10,6 +10,7 @@ import Cart from "./Components/Cart/Cart";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Registration from "./Components/Registration/Registration";
 import Fav from "./Components/Favorites/Fav";
+import Contacts from "./Components/Contacts/Contacts";
 
 const MainRoutes = () => {
   return (
@@ -24,6 +25,7 @@ const MainRoutes = () => {
       <Route path="/details" element={<ProductDetails />} />
       <Route path="/fav" element={<Fav />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contacts" element={<Contacts />} />
     </Routes>
   );
 };
