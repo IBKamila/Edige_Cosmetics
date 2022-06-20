@@ -34,10 +34,20 @@ const ProductDetails = () => {
     // navigate("/products");
   };
 
+import { favContext } from "../../Context/FavContext";
+import { productContext } from "../../Context/ProductContext";
+
+const ProductDetails = () => {
+  const { getProducts, products, deleteProduct, editProduct } =
+    useContext(productContext);
+  const { addProductToCart } = useContext(cartContext);
+  const { addProductToFav } = useContext(favContext);
+
   return (
     <>
       <Navbar />
       <hr className="hrDet" />
+
       {productDetails ? (
         <div className="detMain">
           <div className="leftDet">

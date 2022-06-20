@@ -30,7 +30,9 @@ const Navbar = (props) => {
           </NavLink>
         </div>
         <div className="navIcons">
-          <span className="navList textNav">Contacts</span>
+          <NavLink to="/contacts">
+            <span className="navList textNav">Contacts</span>
+          </NavLink>
           <input
             className="navIcon search-inp"
             type="search"

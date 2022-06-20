@@ -36,12 +36,14 @@ const Cart = () => {
                   </div>
                   <div className="cartInfo">
                     <h1 className="cardTitle">{elem.item.title}</h1>
-                    <span
-                      onClick={() => addProductToFav(elem)}
-                      className="cartFav"
-                    >
-                      <img className="favImg" alt="heart_img" /> Add to
-                      favorites
+                    <span className="cartFav">
+                      <img
+                        src={fill}
+                        onClick={() => addProductToFav(elem)}
+                        className="favImg"
+                        alt="heart_img"
+                      />
+                      Add to favorites
                     </span>
                     <input
                       className="cartInp"
