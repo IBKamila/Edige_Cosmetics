@@ -28,7 +28,7 @@ const Fav = () => {
                 <h1 class="title">{elem.item.title}</h1>
               </div>
               <div class="remove">
-                <u onClick={() => deleteFavProduct(elem.item.id)}>Remove</u>
+                <u onClick={() => deleteFavProduct(elem.item.id)}>Delete</u>
               </div>
             </div>
           ))
