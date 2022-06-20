@@ -8,10 +8,10 @@ const initObj = {
   description: "",
   price: 0,
   category: "",
-  // img1: "",
-  // img2: "",
-  // img3: "",
-  // img4: "",
+  img1: "",
+  img2: "",
+  img3: "",
+  img4: "",
   // comments: [],
 };
 
@@ -30,6 +30,17 @@ const AddProduct = () => {
   //     progress: undefined,
   //   });
   // };
+
+  // const [product, setProduct] = useState({
+  //   title: "",
+  //   description: "",
+  //   price: 0,
+  //   category: "",
+  //   img1: "",
+  //   img2: "",
+  //   img3: "",
+  //   img4: "",
+  // });
 
   const handleChange = (e) => {
     let obj = {
@@ -61,6 +72,11 @@ const AddProduct = () => {
     addProduct(inpValues);
     clearInput();
   };
+
+  // const handleFile = (e) => {
+  //   let file = e.target.files[0];
+  //   setInpValues({ ...inpValues, img1: file });
+  // };
 
   return (
     <div className="containerAdd">
@@ -103,6 +119,15 @@ const AddProduct = () => {
           name="category"
           onChange={(e) => handleChange(e)}
         />
+        {/* <input
+          className="input4Add"
+          type="file"
+          onChange={(e) => handleFile(e)}
+          name="img1"
+          id="standard-basic"
+          label="img1"
+          variant="standard"
+        /> */}
         <TextField
           className="input4Add"
           id="standard-basic"

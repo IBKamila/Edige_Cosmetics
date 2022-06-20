@@ -16,7 +16,6 @@ const EditProduct = () => {
   }, []);
 
   const [inpValues, setInpValues] = useState(productDetails);
-  console.log(productDetails);
 
   const handleChange = (e) => {
     let obj = {
@@ -27,7 +26,7 @@ const EditProduct = () => {
   };
 
   const handleSave = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     editProduct(id, inpValues);
     navigate("/list");
   };
@@ -109,7 +108,6 @@ const EditProduct = () => {
           name="img4"
           onChange={(e) => handleChange(e)}
         />
-        <h1>gfdrtgsd</h1>
         <button className="save-btn" onClick={() => handleSave(inpValues)}>
           Save changes
         </button>

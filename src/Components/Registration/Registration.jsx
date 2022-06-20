@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from "../Auth/Media/logo1.svg";
 import "./Registration.css";
 import { TextField } from "@mui/material";
 import logo2 from "../../Media/Vector.svg";
@@ -25,9 +24,6 @@ const Registration = () => {
   return (
     <div>
       <div className="conteiner_auth">
-        {/* <div className="logoName">
-          <img src={logo} alt="logo" />
-        </div> */}
         <h1 className="titul">Registration</h1>
         <h2 className="text">
           If this is your first time on the site, then you should fill out a
@@ -63,7 +59,6 @@ const Registration = () => {
           label="Password confirm"
           variant="standard"
           onChange={(e) => setPasswordConfirm(e.target.value)}
-          // onChange={(e) => setPassword_confirm(e.target.value)}
           value={passwordConfirm}
         />
         <button className="btn" onClick={() => handleRegister(email, password)}>

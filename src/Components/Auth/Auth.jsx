@@ -1,5 +1,4 @@
 import React from "react";
-// import logo from "./Media/logo1.svg";
 import "./Auth.css";
 import { TextField } from "@mui/material";
 import logo2 from "../../Media/Vector.svg";
@@ -16,9 +15,6 @@ const Auth = () => {
   }
   return (
     <div className="conteiner_auth">
-      {/* <div className="logoName">
-        <img src={logo} alt="logo" />
-      </div> */}
       <h1 className="titul1">Authorization</h1>
       <h2 className="text1">
         Please enter your username and password from your account tolog in, or
