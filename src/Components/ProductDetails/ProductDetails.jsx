@@ -7,8 +7,11 @@ import cart from "../../imgs/cart.png";
 import "./ProductDetails.css";
 import { cartContext } from "../../Context/CartContext";
 import { favContext } from "../../Context/FavContext";
+import { productContext } from "../../Context/ProductContext";
 
 const ProductDetails = () => {
+  const { getProducts, products, deleteProduct, editProduct } =
+    useContext(productContext);
   const { addProductToCart } = useContext(cartContext);
   const { addProductToFav } = useContext(favContext);
 
@@ -22,20 +25,12 @@ const ProductDetails = () => {
         </div>
         <div className="rightDet">
           <span className="favDet">
-            <img
-              // onClick={() => addProductToFav(item)}
-              className="heartDet"
-              src={heart}
-              alt="heart_img"
-            />
+            <img className="heartDet" src={heart} alt="heart_img" />
             Add to favorites
           </span>
           <h1 className="detTitle">Title</h1>
           <div className="detPrice">54 €</div>
-          <button
-            // onClick={() => addProductToCart(item)}
-            className="btnDet"
-          >
+          <button className="btnDet">
             <img src={cart} alt="cart_img" />
             Add to shopping cart
           </button>
