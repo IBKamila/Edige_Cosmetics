@@ -13,13 +13,11 @@ import Filter from "../Filter/Filter";
 const ProductList = () => {
   const { getProducts, products, deleteProduct, editProduct } =
     useContext(productContext);
-    const { addProductToCart } = useContext(cartContext);
+  const { addProductToCart } = useContext(cartContext);
   const { addProductToFav } = useContext(favContext);
 
   const navigate = useNavigate();
   const { id } = useParams();
-
-
 
   useEffect(() => {
     getProducts();
