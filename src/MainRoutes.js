@@ -10,6 +10,8 @@ import Cart from "./Components/Cart/Cart";
 import ProductDetails from "./Components/ProductDetails/ProductDetails";
 import Registration from "./Components/Registration/Registration";
 import Fav from "./Components/Favorites/Fav";
+import AdminPanel from "./Components/Admin/AdminPanel";
+import Order from "./Components/Order/Order";
 import Contacts from "./Components/Contacts/Contacts";
 
 const MainRoutes = () => {
@@ -17,11 +19,15 @@ const MainRoutes = () => {
     <Routes>
       <Route path="/" element={<Home />} />
       <Route path="/add" element={<AddProduct />} />
+      <Route path="/admin" element={<AdminPanel />} />
       <Route path="/edit/:id" element={<EditProduct />} />
       <Route path="/list" element={<ProductList />} />
       <Route path="/auth" element={<Auth />} />
       <Route path="/registr" element={<Registration />} />
       <Route path="/cart" element={<Cart />} />
+      <Route path="/details" element={<ProductDetails />} />
+      <Route path="/fav" element={<Fav />} />
+      <Route path="/order" element={<Order />} />
       <Route path="/details/:id" element={<ProductDetails />} />
       <Route path="/favorite" element={<Fav />} />
       <Route path="/about" element={<About />} />
