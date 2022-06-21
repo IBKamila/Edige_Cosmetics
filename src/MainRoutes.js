@@ -12,6 +12,7 @@ import Registration from "./Components/Registration/Registration";
 import Fav from "./Components/Favorites/Fav";
 import AdminPanel from "./Components/Admin/AdminPanel";
 import Order from "./Components/Order/Order";
+import Contacts from "./Components/Contacts/Contacts";
 
 const MainRoutes = () => {
   return (
@@ -27,7 +28,10 @@ const MainRoutes = () => {
       <Route path="/details" element={<ProductDetails />} />
       <Route path="/fav" element={<Fav />} />
       <Route path="/order" element={<Order />} />
+      <Route path="/details/:id" element={<ProductDetails />} />
+      <Route path="/favorite" element={<Fav />} />
       <Route path="/about" element={<About />} />
+      <Route path="/contacts" element={<Contacts />} />
     </Routes>
   );
 };

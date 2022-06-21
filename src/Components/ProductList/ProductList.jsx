@@ -1,22 +1,38 @@
 import React, { useContext, useEffect } from "react";
-import { NavLink } from "react-router-dom";
+import { NavLink, useNavigate, useParams } from "react-router-dom";
 import { productContext } from "../../Context/ProductContext";
 import Footer from "../Footer/Footer";
 import Navbar from "../Navbar/Navbar";
 import cart1 from "../../Media/bag-21.svg";
 import fav3 from "../../Media/heart3.svg";
+import { Button } from "@mui/material";
 import { cartContext } from "../../Context/CartContext";
 import { favContext } from "../../Context/FavContext";
 import Filter from "../Filter/Filter";
 
 const ProductList = () => {
-  const { getProducts, products } = useContext(productContext);
+  const { getProducts, products, deleteProduct, editProduct } =
+    useContext(productContext);
   const { addProductToCart } = useContext(cartContext);
   const { addProductToFav } = useContext(favContext);
+
+  const navigate = useNavigate();
+  const { id } = useParams();
 
   useEffect(() => {
     getProducts();
   }, []);
+
+  const handleDelete = (id) => {
+    deleteProduct(id);
+    // navigate("/products");
+  };
+  const handleEdit = (id) => {
+    editProduct(id);
+    // navigate("/products");
+  };
+  //   const { addProductToCart } = useContext(cartContext);
+  //   const { addProductToFav } = useContext(favContext);
 
   //   const [searchParams, setSearchParams] = useSearchParams();
 
@@ -67,7 +83,7 @@ const ProductList = () => {
     //   </div>
     <>
       <Navbar />
-      <Filter/>
+      <Filter />
       <div className="prodList">
         {/* <div className="sideNav">
         <Filter
@@ -83,7 +99,7 @@ const ProductList = () => {
             })} */}
 
           {products.map((item) => (
-            <div className="card">
+            <div className="card" key={item.id}>
               <div>
                 <NavLink to={`/details/${item.id}`}>
                   <img className="imgList" src={item.img} alt="card" />
@@ -109,6 +125,10 @@ const ProductList = () => {
                 src={cart1}
                 onClick={() => addProductToCart(item)}
               ></img>
+              <Button onClick={() => handleDelete(item.id)}>delete</Button>
+              <NavLink to={`/edit/${item.id}`}>
+                <Button onClick={() => handleEdit(item.id)}>edit</Button>
+              </NavLink>
             </div>
           ))}
         </div>

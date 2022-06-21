@@ -31,6 +31,17 @@ const AddProduct = () => {
   //   });
   // };
 
+  // const [product, setProduct] = useState({
+  //   title: "",
+  //   description: "",
+  //   price: 0,
+  //   category: "",
+  //   img1: "",
+  //   img2: "",
+  //   img3: "",
+  //   img4: "",
+  // });
+
   const handleChange = (e) => {
     let obj = {
       ...inpValues,
@@ -48,10 +59,10 @@ const AddProduct = () => {
     if (
       inpValues.title.trim() === "" ||
       inpValues.description.trim() === "" ||
-      inpValues.img1.trim() === "" ||
-      inpValues.img2.trim() === "" ||
-      inpValues.img3.trim() === "" ||
-      inpValues.img4.trim() === "" ||
+      // inpValues.img1.trim() === "" ||
+      // inpValues.img2.trim() === "" ||
+      // inpValues.img3.trim() === "" ||
+      // inpValues.img4.trim() === "" ||
       inpValues.price.toString().trim() === ""
     ) {
       // alertToastify();
@@ -61,6 +72,11 @@ const AddProduct = () => {
     addProduct(inpValues);
     clearInput();
   };
+
+  // const handleFile = (e) => {
+  //   let file = e.target.files[0];
+  //   setInpValues({ ...inpValues, img1: file });
+  // };
 
   return (
     <div className="containerAdd">
@@ -103,6 +119,15 @@ const AddProduct = () => {
           name="category"
           onChange={(e) => handleChange(e)}
         />
+        {/* <input
+          className="input4Add"
+          type="file"
+          onChange={(e) => handleFile(e)}
+          name="img1"
+          id="standard-basic"
+          label="img1"
+          variant="standard"
+        /> */}
         <TextField
           className="input4Add"
           id="standard-basic"

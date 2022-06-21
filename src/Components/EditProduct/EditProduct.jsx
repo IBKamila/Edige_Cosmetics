@@ -26,7 +26,7 @@ const EditProduct = () => {
   };
 
   const handleSave = (e) => {
-    e.preventDefault();
+    // e.preventDefault();
     editProduct(id, inpValues);
     navigate("/list");
   };
@@ -108,7 +108,7 @@ const EditProduct = () => {
           name="img4"
           onChange={(e) => handleChange(e)}
         />
-        <button className="save-btn" onClick={handleSave}>
+        <button className="save-btn" onClick={() => handleSave(inpValues)}>
           Save changes
         </button>
       </form>

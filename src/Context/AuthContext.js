@@ -4,7 +4,7 @@ import { useNavigate } from "react-router-dom";
 
 export const authContext = createContext();
 
-const API = "http://18.212.64.144/";
+const API = "https://cosmeticshackathon.herokuapp.com/";
 
 export const useAuth = () => {
   return useContext(authContext);
@@ -40,21 +40,18 @@ const AuthContextProvider = ({ children }) => {
     }
   };
 
-  async function login(username, email, password, password_confirm) {
-    console.log(username, email, password, password_confirm);
+  async function login(email, password) {
+    console.log(email, password);
     const config = {
       headers: { "Content-Type": "multipart/form-data" },
     };
     let formData = new FormData();
     formData.append("email", email);
     formData.append("password", password);
-    formData.append("password_confirm", password_confirm);
 
     try {
-      let res = await axios.post(`${API}api/token/`, formData, config);
+      let res = await axios.post(`${API}account/api/login/`, formData, config);
       localStorage.setItem("token", JSON.stringify(res.data));
-      localStorage.setItem("username", username);
-      setUser(username);
       navigate("/");
     } catch (error) {
       setError("error occured");
@@ -67,7 +64,7 @@ const AuthContextProvider = ({ children }) => {
       const Authorization = `Bearer ${token.access}`;
 
       let res = await axios.post(
-        `${API}api/token/refresh/`,
+        `${API}account/api/token/refresh/`,
         {
           refresh: token.refresh,
         },
@@ -75,7 +72,7 @@ const AuthContextProvider = ({ children }) => {
           headers: { Authorization },
         }
       );
-
+      console.log(token.access);
       localStorage.setItem(
         "token",
         JSON.stringify({
