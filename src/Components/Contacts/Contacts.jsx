@@ -43,49 +43,53 @@ const Contacts = () => {
         <img src={map}></img>
         <div>
           <h3 className="textour">
-            Each Boltaeva brand product is truly unique - everything is thought
-            out to the smallest detail.
+            Each Edige Cosmetics brand product is truly unique - everything is
+            thought out to the smallest detail.
           </h3>
-          <img className="iconsour" src={icons}></img>
         </div>
 
-        <div>
-          <img src={a11}></img>
-          <img src={a22}></img>
-          <img src={a33}></img>
-          <img src={a44}></img>
-          <img src={a55}></img>
-          <img src={a66}></img>
-          <img src={a77}></img>
-          <img src={a88}></img>
+        <div className="blackimg">
+          <img className="black" src={a11}></img>
+          <img className="black" src={a22}></img>
+          <img className="black" src={a33}></img>
+          <img className="black" src={a44}></img>
+          <img className="black" src={a55}></img>
+          <img className="black" src={a66}></img>
+          <img className="black" src={a77}></img>
+          <img className="black" src={a88}></img>
         </div>
 
-        <div>
-          <div>
-            <img src={logo}></img>
-            <h3>Request a call back</h3>
-            <TextField
-              className="inp"
-              id="standard-basic"
-              label="Surname, name and patronymic"
-              variant="standard"
-            />
-            <TextField
-              className="inp"
-              id="standard-basic"
-              label="Contact number"
-              variant="standard"
-            />
-            <TextField
-              className="inp"
-              id="standard-basic"
-              label="Email"
-              variant="standard"
-            />
-            <button>Request call</button>
+        <div className="blockour">
+          <div className="rightblock">
+            <img className="logonum" src={logo}></img>
+            <h3 className="request">Request a call back</h3>
+            <div className="inputstext">
+              <div className="inpour1">
+                <TextField
+                  id="standard-basic"
+                  label="Surname, name and patronymic"
+                  variant="standard"
+                />
+              </div>
+              <div className="inpour2">
+                <TextField
+                  id="standard-basic"
+                  label="Contact number"
+                  variant="standard"
+                />
+              </div>
+              <div className="inpour3">
+                <TextField
+                  id="standard-basic"
+                  label="Email"
+                  variant="standard"
+                />
+              </div>
+            </div>
+            <button className="btnour">Request call</button>
           </div>
 
-          <div>
+          <div className="imgour2">
             <img src={dva}></img>
           </div>
         </div>
