@@ -15,63 +15,63 @@ const Home = () => {
       <Navbar location="home" />
       <div className="container_home">
         <div className="card_holder">
-          <div className="card_home home_cat">
+          <div data-aos="fade-up" className="card_home home_cat">
             <img className="card_img" src={care} alt="care_img" />
             <h1 className="h1home">Care</h1>
           </div>
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
         </div>
         <div className="card_holder">
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-right" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-right" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-right" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div className="card_home home_cat">
+          <div data-aos="fade-up" className="card_home home_cat">
             <img className="card_img" src={beauty} alt="care_img" />
             <h1 className="h1home">Beauty</h1>
           </div>
         </div>
-        <div className="card_holder">
-          <div className="card_home home_cat">
+        <div data-aos="fade-left" className="card_holder">
+          <div data-aos="fade-up" className="card_home home_cat">
             <img className="card_img" src={brows} alt="care_img" />
             <h1 className="h1home">Brows</h1>
           </div>
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div className="card_home cardProd_home">
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>

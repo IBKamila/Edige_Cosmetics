@@ -1,0 +1,12 @@
+.adminCont{
+    margin: 0;
+    background-image: url(../../imgs/header.png);
+}
+
+.adminMain{
+    background-color: #eee4da7e;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+
