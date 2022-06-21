@@ -51,13 +51,12 @@
   font-weight: 400;
   font-size: 21px;
   line-height: 110%;
-  /* or 23px */
 
   color: #555555;
 }
 .textour {
   display: flex;
-  padding-right: 800px;
+  padding-right: 50px;
   width: 492px;
 
   font-family: "Cera Pro";
@@ -68,7 +67,68 @@
   letter-spacing: -0.03em;
   color: #555555;
 }
-.iconsour {
-  top: 50px;
-  margin-left: 700px;
+.blackimg {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  display: flex;
+  flex-wrap: wrap;
+}
+.black {
+  margin-bottom: 20px;
+}
+.blockour {
+  display: flex;
+  margin-top: 50px;
+}
+
+.logonum {
+  margin-left: 5px;
+  margin-top: 60px;
+}
+.request {
+  width: 303px;
+  height: 40px;
+  left: 151px;
+  top: 2741px;
+
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+
+  color: #555555;
+}
+
+.inpour1 {
+  margin-top: 30px;
+  margin-bottom: 20px;
+}
+
+.inpour2 {
+  margin-top: 20px;
+}
+.inpour3 {
+  margin-top: 20px;
+}
+.btnour {
+  color: #555555;
+  background-color: #eee4da;
+  cursor: pointer;
+  border-radius: 66px;
+  width: 400px;
+  height: 80px;
+  font-size: 20px;
+  border: #eee4da;
+  box-shadow: 0px 5px 23px -5px rgba(34, 60, 80, 0.6);
+  margin-top: 50px;
+}
+.imgour2 {
+  margin-top: 55px;
+  margin-left: 220px;
+  margin-bottom: 50px;
+
+  border-radius: 6px;
 }
