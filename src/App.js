@@ -5,7 +5,7 @@ import { BrowserRouter } from "react-router-dom";
 import AuthContextProvider from "./Context/AuthContext";
 import CartContextProvider from "./Context/CartContext";
 import FavContextProvider from "./Context/FavContext";
-import ProductContextProvider from "./Context/ProductContext";
+import CrudContextProvider from "./Context/CrudContextProvider";
 import MainRoutes from "./MainRoutes";
 
 const App = () => {
@@ -15,7 +15,7 @@ const App = () => {
   return (
     <div>
       <BrowserRouter>
-        <ProductContextProvider>
+        <CrudContextProvider>
           <CartContextProvider>
             <FavContextProvider>
               <AuthContextProvider>
@@ -23,7 +23,7 @@ const App = () => {
               </AuthContextProvider>
             </FavContextProvider>
           </CartContextProvider>
-        </ProductContextProvider>
+        </CrudContextProvider>
       </BrowserRouter>
     </div>
   );

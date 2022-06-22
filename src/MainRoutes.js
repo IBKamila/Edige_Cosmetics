@@ -1,6 +1,5 @@
 import React from "react";
 import { Route, Routes } from "react-router-dom";
-import AddProduct from "./Components/AddProduct/AddProduct";
 import Auth from "./Components/Auth/Auth";
 import EditProduct from "./Components/EditProduct/EditProduct";
 import Home from "./Components/Home/Home";
@@ -13,6 +12,7 @@ import Fav from "./Components/Favorites/Fav";
 import AdminPanel from "./Components/Admin/AdminPanel";
 import Order from "./Components/Order/Order";
 import Contacts from "./Components/Contacts/Contacts";
+import AddProduct from "./Components/Admin/AddProduct";
 
 const MainRoutes = () => {
   return (

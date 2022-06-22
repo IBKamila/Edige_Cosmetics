@@ -1,141 +1,74 @@
-import React, { useContext, useEffect } from "react";
-import { NavLink, useNavigate, useParams } from "react-router-dom";
-import { productContext } from "../../Context/ProductContext";
-import Footer from "../Footer/Footer";
-import Navbar from "../Navbar/Navbar";
-import cart1 from "../../Media/bag-21.svg";
-import fav3 from "../../Media/heart3.svg";
-import { Button } from "@mui/material";
-import { cartContext } from "../../Context/CartContext";
-import { favContext } from "../../Context/FavContext";
-import Filter from "../Filter/Filter";
+import React, { useEffect } from 'react';
+import Footer from '../Footer/Footer';
+import Navbar from '../Navbar/Navbar';
+import Filter from '../Filter/Filter';
+import Cat from "../../imgs/carecat.png"
+import "./ProductList.css"
+import { useProducts } from '../../Context/CrudContextProvider';
+import { Box, Pagination} from '@mui/material';
+import { useSearchParams } from "react-router-dom";
+import SideBar from '../SiteBar/SiteBar';
+
+
+
 
 const ProductList = () => {
-  const { getProducts, products, deleteProduct, editProduct } =
-    useContext(productContext);
-  const { addProductToCart } = useContext(cartContext);
-  const { addProductToFav } = useContext(favContext);
+    const { products, getProducts, page, setPage, count } = useProducts();
+    const [searchParams, ] = useSearchParams();
+    const filterProducts = products.filter(product => product.category != "Аксессуары и PRO");
+    filterProducts.map((item) => {
+        console.log(item.category, "items")
+    })
 
-  const navigate = useNavigate();
-  const { id } = useParams();
+    useEffect(() => {
+        getProducts();
+    
+    }, []);
+    
+    useEffect(() => {
+        getProducts();
+    
+    }, [page, searchParams]); 
+    
+    
+    
+    const handleChange = (e, p) => {
+        setPage(p)
+    
+    }
 
-  useEffect(() => {
-    getProducts();
-  }, []);
 
-  const handleDelete = (id) => {
-    deleteProduct(id);
-    // navigate("/products");
-  };
-  const handleEdit = (id) => {
-    editProduct(id);
-    // navigate("/products");
-  };
-  //   const { addProductToCart } = useContext(cartContext);
-  //   const { addProductToFav } = useContext(favContext);
+    return (
+        <>
+        <Navbar/>
+        <SideBar />
 
-  //   const [searchParams, setSearchParams] = useSearchParams();
+            <br/>
+            <br/>
+            <div className='contCat'>
+            
+                <div className="cards_list card_holder">
+                {products.map((item) => (
+                <div className="card_list card_home cardProd_home">
+                    <img className="card_imgP"  src={`https://${item.image}` }alt="care_img" />
+                    <h1 className="h1homeProd">{item.title}</h1>
+                    <h1 className="h1homePrice">{item.price}</h1>;
+                </div>
+                ))}
+                </div>
+                </div>
+                <Box sx={{ textAlign: 'center' }}>
+                {products ? (
 
-  //   const [category, setCategory] = useState(
-  //     searchParams.get("category") || "all"
-  //   );
-
-  //   const paramsWithCategory = () => {
-  //     return {
-  //       category: category,
-  //       q: searchParams.get("q"),
-  //     };
-  //   };
-
-  //   const paramsNoCategory = () => {
-  //     return {
-  //       q: searchParams.get("q") || "",
-  //     };
-  //   };
-
-  //   useEffect(() => {
-  //     if (searchParams.get("category")) {
-  //       setSearchParams(paramsWithCategory());
-  //     } else {
-  //       setSearchParams(paramsNoCategory());
-  //     }
-  //   }, []);
-
-  //   useEffect(() => {
-  //     console.log("useEffect in product list");
-  //     getProducts();
-  //     if (category === "all") {
-  //       setSearchParams(paramsNoCategory());
-  //     } else {
-  //       setSearchParams(paramsWithCategory());
-  //     }
-  //   }, [category, searchParams]);
-
-  //   useEffect(() => {
-  //     console.log(products);
-  //   }, [products]);
-
-  return (
-    // <div>
-    //   <div className="card">
-    //     <img />
-    //     <h1 className="h1home">Care</h1>
-    //   </div>
-    <>
-      <Navbar />
-      <Filter />
-      <div className="prodList">
-        {/* <div className="sideNav">
-        <Filter
-        className="filter"
-        category={category}
-        setCategory={setCategory}
-        />
-      </div> */}
-        <div className="cards">
-          {/* {products &&
-            products.map(() => {
-              return <span>hello</span>;
-            })} */}
-
-          {products.map((item) => (
-            <div className="card" key={item.id}>
-              <div>
-                <NavLink to={`/details/${item.id}`}>
-                  <img className="imgList" src={item.img} alt="card" />
-                </NavLink>
-              </div>
-
-              <div className="card-text">
-                <span className="card-title">{item.title}</span>
-                <p className="card-desc">{item.description}</p>
-              </div>
-              <div className="card-price">
-                <img
-                  className="incFav"
-                  src={fav3}
-                  onClick={() => addProductToFav(item)}
-                ></img>
-
-                <img className="incSale" src="" alt="card-tag" />
-                <span className="card-price2">{item.price}$</span>
-              </div>
-              <img
-                className="incCart"
-                src={cart1}
-                onClick={() => addProductToCart(item)}
-              ></img>
-              <Button onClick={() => handleDelete(item.id)}>delete</Button>
-              <NavLink to={`/edit/${item.id}`}>
-                <Button onClick={() => handleEdit(item.id)}>edit</Button>
-              </NavLink>
-            </div>
-          ))}
-        </div>
-      </div>
-      <Footer />
-    </>
-  );
+            <Box my={3} display="flex" justifyContent="center">
+              <Pagination count={count} page={page} onChange={handleChange} />
+            </Box>
+            ) : ('')
+        }
+          </Box>
+        <Footer/>
+        </>
+        );
 };
 
 export default ProductList;

@@ -1,122 +1,21 @@
-/* .container_home {
-} */
-.prodList {
-  display: flex;
-  justify-content: space-evenly;
+.catTitle{
+  text-align: center;
+  color: #555555;
+  font-size: 48px;
+  font-weight: 400;
+}
+
+.catImg{
+  width: 90%;
+  margin-left: 5%;
+  margin-right: 5%;
+  margin-bottom: 5%;
+}
+
+.cards_list{
   flex-wrap: wrap;
 }
 
-.cards {
-  background-color: #ac8f78;
-  height: 430px;
-  width: 310px;
-  left: 0px;
-  top: 0px;
-  border-radius: 6px;
-  margin-bottom: 30px;
+.card_list{
+  margin-bottom: 3%;
 }
-
-.card-text {
-  position: absolute;
-  right: 1350px;
-  top: 300px;
-
-  font-family: "Cera Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 48px;
-  line-height: 120%;
-
-  letter-spacing: -0.03em;
-
-  color: #555555;
-}
-
-/* p {
-    position: absolute;
-    bottom: 350px;
-    padding-right: 200px;
-  
-    font-family: "Cera Pro";
-    font-style: normal;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 120%;
-    letter-spacing: -0.02em;
-  
-    color: #555555;
-  } */
-
-/* .nameCards {
-  padding-right: 10px;
-}
-
-.h3home {
-  font-family: Cera Pro;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 48px;
-  letter-spacing: -0.03em;
-  text-align: left;
-
-  position: absolute;
-  width: 492px;
-  height: 144px;
-  left: 834px;
-  top: 1600px;
-
-  font-family: "Cera Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 32px;
-  line-height: 150%;
-  letter-spacing: -0.03em;
-
-  color: #555555;
-}
-
-.desc {
-  position: absolute;
-  width: 484px;
-  height: 128px;
-  left: 834px;
-  top: 1800px;
-
-  font-family: "Cera Pro";
-  font-style: normal;
-  font-weight: 100;
-  font-size: 18px;
-  line-height: 180%;
-  /* or 32px */
-/* 
-  letter-spacing: -0.02em;
-
-  color: #555555;
-} */
-
-/* .h4home {
-  position: absolute;
-  width: 160px;
-  height: 31px;
-  left: 834px;
-  top: 1960px;
-
-  font-family: "Cera Pro";
-  font-style: normal;
-  font-weight: 400;
-  font-size: 24px;
-  line-height: 130%;
-  letter-spacing: -0.02em;
-
-  color: #555555;
-}
-.sign {
-  position: absolute;
-  width: 140px;
-  height: 66px;
-  left: 1072px;
-  top: 1980px;  */
-
-/* background: linear-gradient(0deg, #ac8f78, #ac8f78);
-    background-blend-mode: lighten, normal; */
-/* } */
