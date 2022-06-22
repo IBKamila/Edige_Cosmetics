@@ -1,0 +1,79 @@
+.checkoutText {
+  margin-left: 70px;
+  margin-top: 50px;
+  font-weight: 400;
+  font-size: 48px;
+  line-height: 110%;
+  letter-spacing: -0.03em;
+
+  color: #555555;
+}
+.ordInps {
+  margin-left: 70px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+}
+.ordRight {
+  display: flex;
+  flex-direction: column;
+  background-color: #eee4da;
+}
+
+.titletext {
+  /* margin-left: 1054px; */
+  top: 230px;
+
+  font-weight: 400;
+  font-size: 36px;
+  line-height: 110%;
+  /* identical to box height, or 40px */
+
+  letter-spacing: -0.03em;
+
+  color: #555555;
+}
+.products8 {
+  left: 1167px;
+  top: 241px;
+
+  font-family: "Cera Pro";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 120%;
+  letter-spacing: -0.03em;
+
+  color: #555555;
+}
+.btnstrelka1 {
+  color: #555555;
+  background-color: #eee4da;
+  cursor: pointer;
+  border-radius: 66px;
+  width: 50px;
+  height: 50px;
+  font-size: 20px;
+  border: #eee4da;
+  box-shadow: 0px 5px 23px -5px rgba(34, 60, 80, 0.6);
+  margin: 10px;
+}
+.obsh {
+  display: flex;
+  justify-content: space-between;
+}
+
+.img_block {
+  display: flex !important ;
+  flex-wrap: wrap !important;
+  justify-content: space-around !important;
+  width: 100%;
+}
+.blocksimg1 {
+  display: flex;
+  margin: 10px;
+  width: 100%;
+}
+.blocksimg2 {
+  display: flex;
+  width: 100%;
+}

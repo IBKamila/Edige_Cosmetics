@@ -21,7 +21,7 @@ const Contacts = () => {
   return (
     <div>
       <Navbar />
-
+      <hr className="hrabout" />
       <h1 className="our">Our contacts</h1>
 
       <img className="imgour" src={kreslaimg}></img>
