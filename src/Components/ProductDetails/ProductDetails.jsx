@@ -9,10 +9,8 @@ import { cartContext } from "../../Context/CartContext";
 import { authContext } from "../../Context/AuthContext";
 import { productContext } from "../../Context/ProductContext";
 import { NavLink, useParams } from "react-router-dom";
-import { favContext } from "../../Context/FavContext";
 import { Button } from "@mui/material";
 import { favContext } from "../../Context/FavContext";
-import { productContext } from "../../Context/ProductContext";
 
 const ProductDetails = () => {
   const { addProductToCart } = useContext(cartContext);
@@ -36,59 +34,49 @@ const ProductDetails = () => {
     // navigate("/products");
   };
 
-  const ProductDetails = () => {
-    const { getProducts, products, deleteProduct, editProduct } =
-      useContext(productContext);
-    const { addProductToCart } = useContext(cartContext);
-    const { addProductToFav } = useContext(favContext);
+  return (
+    <>
+      <Navbar />
+      <hr className="hrDet" />
 
-    return (
-      <>
-        <Navbar />
-        <hr className="hrDet" />
-
-        {productDetails ? (
-          <div className="detMain">
-            <div className="leftDet">
+      {productDetails ? (
+        <div className="detMain">
+          <div className="leftDet">
+            <img className="detImg" src={productDetails.img1} alt="main_img" />
+          </div>
+          <div className="rightDet">
+            <span className="favDet">
               <img
-                className="detImg"
-                src={productDetails.img1}
-                alt="main_img"
+                onClick={(e) => addProductToFav(productDetails)}
+                className="heartDet"
+                src={heart}
+                alt="heart_img"
               />
-            </div>
-            <div className="rightDet">
-              <span className="favDet">
-                <img
-                  onClick={(e) => addProductToFav(productDetails)}
-                  className="heartDet"
-                  src={heart}
-                  alt="heart_img"
-                />
-                Add to favorites
-              </span>
-              <h1 className="detTitle">{productDetails.title}</h1>
-              <div className="detPrice">{productDetails.price}</div>
-              <button
-                onClick={(e) => addProductToCart(productDetails)}
-                className="btnDet"
-              >
-                <img src={cart} alt="cart_img" /> Add to shopping cart
-              </button>
-              <h3 className="descDet">Description</h3>
-              <p className="pDet">{productDetails.description}</p>
+              Add to favorites
+            </span>
+            <h1 className="detTitle">{productDetails.title}</h1>
+            <div className="detPrice">{productDetails.price}</div>
+            <button
+              onClick={(e) => addProductToCart(productDetails)}
+              className="btnDet"
+            >
+              <img src={cart} alt="cart_img" /> Add to shopping cart
+            </button>
+            <h3 className="descDet">Description</h3>
+            <p className="pDet">{productDetails.description}</p>
 
-              {email === "admin@gmail.com" ? (
-                <div className="iconsDet">
-                  <NavLink to="/list">
-                    <Button onClick={() => handleDelete(id)}>delete</Button>
-                  </NavLink>
-                  <NavLink to={`/edit/${id}`}>
-                    <Button onClick={() => handleEdit(id)}>edit</Button>
-                  </NavLink>
-                </div>
-              ) : null}
+            {email === "admin@gmail.com" ? (
+              <div className="iconsDet">
+                <NavLink to="/list">
+                  <Button onClick={() => handleDelete(id)}>delete</Button>
+                </NavLink>
+                <NavLink to={`/edit/${id}`}>
+                  <Button onClick={() => handleEdit(id)}>edit</Button>
+                </NavLink>
+              </div>
+            ) : null}
 
-              {/* {email && email != "admin@gmail.com" ? (
+            {/* {email && email != "admin@gmail.com" ? (
               <div className="iconsDet">
                 <a>
                   <img
@@ -107,13 +95,12 @@ const ProductDetails = () => {
                 </NavLink>
               </div>
             ) : null} */}
-            </div>
           </div>
-        ) : null}
-        <Footer />
-      </>
-    );
-  };
+        </div>
+      ) : null}
+      <Footer />
+    </>
+  );
 };
 
 export default ProductDetails;
