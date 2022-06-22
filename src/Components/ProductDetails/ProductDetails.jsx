@@ -9,8 +9,8 @@ import { cartContext } from "../../Context/CartContext";
 import { authContext } from "../../Context/AuthContext";
 import { productContext } from "../../Context/ProductContext";
 import { NavLink, useParams } from "react-router-dom";
-import { favContext } from "../../Context/FavContext";
 import { Button } from "@mui/material";
+import { favContext } from "../../Context/FavContext";
 
 const ProductDetails = () => {
   const { addProductToCart } = useContext(cartContext);
