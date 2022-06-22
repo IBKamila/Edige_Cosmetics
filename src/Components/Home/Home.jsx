@@ -19,58 +19,34 @@ const Home = () => {
             <img className="card_img" src={care} alt="care_img" />
             <h1 className="h1home">Care</h1>
           </div>
-          <div
-            data-aos="fade-left"
-            className="card_home cardProd_home"
-            id="homeProducts1"
-          >
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div
-            data-aos="fade-left"
-            className="card_home cardProd_home"
-            id="homeProducts2"
-          >
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div
-            data-aos="fade-left"
-            className="card_home cardProd_home"
-            id="homeProducts3"
-          >
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
         </div>
         <div className="card_holder">
-          <div
-            data-aos="fade-right"
-            className="card_home cardProd_home"
-            id="homeProducts4"
-          >
+          <div data-aos="fade-right" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div
-            data-aos="fade-right"
-            className="card_home cardProd_home"
-            id="homeProducts5"
-          >
+          <div data-aos="fade-right" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div
-            data-aos="fade-right"
-            className="card_home cardProd_home"
-            id="homeProducts6"
-          >
+          <div data-aos="fade-right" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
@@ -85,29 +61,17 @@ const Home = () => {
             <img className="card_img" src={brows} alt="care_img" />
             <h1 className="h1home">Brows</h1>
           </div>
-          <div
-            data-aos="fade-left"
-            className="card_home cardProd_home"
-            id="homeProducts7"
-          >
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div
-            data-aos="fade-left"
-            className="card_home cardProd_home"
-            id="homeProducts8"
-          >
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
           </div>
-          <div
-            data-aos="fade-left"
-            className="card_home cardProd_home"
-            id="homeProducts9"
-          >
+          <div data-aos="fade-left" className="card_home cardProd_home">
             <img className="card_imgP" src={mask} alt="care_img" />
             <h1 className="h1homeProd">Title</h1>
             <h1 className="h1homePrice">54 €</h1>
@@ -117,12 +81,6 @@ const Home = () => {
 
       <div className="homeDesc">
         <img className="rectangleHome" src={Rectangle} alt="rectangle" />
-        <img
-          className="rectangleHome"
-          id="creams"
-          src={Rectangle}
-          alt="rectangle"
-        />
         <div className="homeRight">
           <h3 className="h3home">
             Each Boltaeva brand product is truly unique - everything is thought

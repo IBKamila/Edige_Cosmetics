@@ -175,3 +175,109 @@
   top: 10px;
   margin-left: 200px;
 }
+
+@media (max-width: 768px) {
+  #text1 {
+    width: 650px;
+  }
+  .titleabout {
+    margin-left: 90px;
+  }
+  .imgabout2 {
+    width: 650px;
+  }
+  .imgabout3 {
+    width: 650px;
+  }
+  .text4 {
+    width: 584px;
+    margin-bottom: 55px;
+  }
+  .imgabout {
+    width: 652px;
+    height: 341px;
+  }
+  .imgpalma {
+    width: 652px;
+    height: 341px;
+  }
+  .conteiner_bio {
+    width: 707px;
+    margin-right: 0px;
+  }
+  .text5 {
+    width: 596px;
+  }
+  .podpis {
+    margin-top: 56px;
+  }
+  .conteiner_about {
+    margin-left: 13%;
+  }
+}
+@media (max-width: 425px) {
+  .conteiner_about {
+    margin-left: 20%;
+  }
+  #text1 {
+    display: none;
+  }
+  .imgabout {
+    width: 379px;
+    height: 199px;
+    margin-top: 10px;
+  }
+  .imgabout2 {
+    width: 300px;
+    font-size: 15px;
+  }
+  .imgabout3 {
+    display: none;
+  }
+  .imgpalma {
+    width: 352px;
+    height: 180px;
+  }
+  .text4 {
+    width: 300px;
+    margin-bottom: 20px;
+    font-size: 20px;
+  }
+  .conteiner_bio {
+    width: 352px;
+    margin-right: 44px;
+  }
+  .text5 {
+    display: none;
+  }
+  .sign2 {
+    margin-left: 40px;
+  }
+  .photolico {
+    margin-left: 15px;
+  }
+  .podpis {
+    margin-top: 18px;
+  }
+  .tkn {
+    margin-top: 8px;
+  }
+}
+@media (max-width: 375px) {
+  .cardnum {
+    display: none;
+  }
+  .imgabout {
+    width: 303px;
+    height: 165px;
+  }
+  .imgpalma {
+    width: 303px;
+    height: 165px;
+  }
+  .titleabout {
+    margin: 0;
+  }
+}
+@media (max-width: 320px) {
+}

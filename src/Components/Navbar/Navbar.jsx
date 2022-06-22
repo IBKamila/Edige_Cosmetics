@@ -2,6 +2,7 @@ import React, { useContext } from "react";
 import cart from "../../imgs/cart.png";
 import user from "../../imgs/user.png";
 import logo from "../../imgs/logo.svg";
+import burger from "../../imgs/burger.svg";
 import "./Navbar.css";
 import { NavLink } from "react-router-dom";
 import Header from "./Header";
@@ -31,6 +32,7 @@ const Navbar = (props) => {
   } else {
     return (
       <nav className="navBar">
+        <img src={burger} alt="burger" id="burger" />
         <div className="navLists">
           <NavLink to="/list">
             <span className="navList">Catalog</span>
@@ -54,14 +56,16 @@ const Navbar = (props) => {
             className="navIcon search-inp"
             type="search"
             aria-label="Search"
+            id="search"
           />
 
           <NavLink to="/cart">
-            <img className="navIcon" src={cart} alt="cart_icon" />
+            <img className="navIcon" src={cart} alt="cart_icon" id="cartIcon" />
           </NavLink>
           <img
             onClick={handleClick}
             className="navIcon"
+            id="userMan"
             src={user}
             alt="user_icon"
             aria-controls={open ? "account-menu" : undefined}

@@ -66,7 +66,7 @@ const About = () => {
           products is a sign of prestige, since the focus of the business is
           focused on exclusive sales, but not on the mass market.
         </h2>
-        <img src={imgpalma} alt="imgpalma" />
+        <img src={imgpalma} alt="imgpalma" className="imgpalma" />
         <h1 className="text4">
           Each Edige brand product is truly unique - everything is thought out
           to the smallest detail.

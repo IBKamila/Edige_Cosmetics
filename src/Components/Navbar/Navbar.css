@@ -18,6 +18,13 @@
   color: #555555;
   margin-left: 50px;
 }
+#burger {
+  font-weight: 400;
+  height: 17px;
+  color: #555555;
+  margin-left: 50px;
+  margin-top: 40px;
+}
 
 .navIcons {
   margin-top: auto;
@@ -61,10 +68,15 @@
   background: #f5ece3;
   width: 200px;
 }
+@media (max-width: 1024px) {
+  #burger {
+    display: none;
+  }
+}
 
 @media (max-width: 768px) {
   .navLists {
-    margin-left: 0px !important;
+    display: none !important;
   }
   .navIcons {
     margin-right: 0px !important;
@@ -75,6 +87,25 @@
 }
 @media (max-width: 425px) {
   .navLists {
+    display: none !important;
+  }
+  .navIcon {
+    margin-right: 26px;
+  }
+  .textNav {
+    display: none;
+  }
+}
+@media (max-width: 375px) {
+  .navIcons {
+    margin-right: -30px !important;
+  }
+}
+@media (max-width: 320px) {
+  #userMan {
+    display: none !important;
+  }
+  #cartIcon {
     display: none !important;
   }
 }

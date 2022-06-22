@@ -2,6 +2,7 @@ import React from "react";
 import cart from "../../imgs/cartWhite.png";
 import user from "../../imgs/userWhite.png";
 import logo from "../../imgs/logoWhite.svg";
+import burger from "../../imgs/burger.svg";
 import "./Header.css";
 import { NavLink } from "react-router-dom";
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -15,6 +16,7 @@ const Header = () => {
   return (
     <div className="headerMain">
       <nav className="navHead">
+        <img src={burger} alt="burger" id="burger" />
         <div className="navLists">
           <NavLink to="/list">
             <span className="navListW">Catalog</span>
@@ -39,11 +41,12 @@ const Header = () => {
             className="navIcon search-inpW"
             type="search"
             aria-label="Search"
+            id="search"
           />
           <NavLink to="/cart">
-            <img className="navIcon" src={cart} alt="cart_icon" />
+            <img className="navIcon" src={cart} alt="cart_icon" id="cartIcon" />
           </NavLink>
-          <img className="navIcon" src={user} alt="user_icon" />
+          <img className="navIcon" src={user} alt="user_icon" id="userMan" />
         </div>
       </nav>
       <Swiper
