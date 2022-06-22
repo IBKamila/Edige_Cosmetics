@@ -116,6 +116,7 @@ const Home = () => {
       </div>
 
       <div className="homeDesc">
+        <img className="rectangleHome" src={Rectangle} alt="rectangle" />
         <img
           className="rectangleHome"
           id="creams"
