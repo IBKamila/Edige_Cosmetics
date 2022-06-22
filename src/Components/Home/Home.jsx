@@ -77,25 +77,25 @@ const Home = () => {
             <h1 className="h1homePrice">54 €</h1>
           </div>
         </div>
-        </div>
+      </div>
 
-        <div className="homeDesc">
-          <img className="rectangleHome" src={Rectangle} alt="rectangle" />
-          <div className="homeRight">
-            <h3 className="h3home">
-              Each Boltaeva brand product is truly unique - everything is thought
-              out to the smallest detail.
-            </h3>
-            <p className="descHome">
-              The brand seeks to build respect among the audience for its
-              products, so that the presence of the company's products is a sign
-              of prestige, since the focus of the business is focused on exclusive
-              sales, but not on the mass market.
-            </p>
-            <h4 className="h4home">FullStack Team</h4>
-            <img className="sign" src={sign} alt="sign" />
-          </div>
+      <div className="homeDesc">
+        <img className="rectangleHome" src={Rectangle} alt="rectangle" />
+        <div className="homeRight">
+          <h3 className="h3home">
+            Each Boltaeva brand product is truly unique - everything is thought
+            out to the smallest detail.
+          </h3>
+          <p className="descHome">
+            The brand seeks to build respect among the audience for its
+            products, so that the presence of the company's products is a sign
+            of prestige, since the focus of the business is focused on exclusive
+            sales, but not on the mass market.
+          </p>
+          <h4 className="h4home">FullStack Team</h4>
+          <img className="sign" src={sign} alt="sign" />
         </div>
+      </div>
       <Footer />
     </>
   );

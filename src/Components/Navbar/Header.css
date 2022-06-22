@@ -113,3 +113,40 @@
 .swiper3 {
   background-image: url("../../Media/kartinka3.jpg");
 }
+
+#burger {
+  display: none;
+}
+
+@media (max-width: 768px) {
+  .navIcon {
+    margin-right: 26px !important;
+  }
+  #burger {
+    display: block !important;
+    margin-left: 10px;
+  }
+  .textNav {
+    display: none;
+  }
+  #navLogo {
+    margin-left: 10px;
+  }
+}
+
+@media (max-width: 375px) {
+  .navIcons {
+    margin-right: -30px !important;
+  }
+}
+@media (max-width: 320px) {
+  #userMan {
+    display: none !important;
+  }
+  #cartIcon {
+    display: none !important;
+  }
+  #search {
+    padding-right: 52px;
+  }
+}
