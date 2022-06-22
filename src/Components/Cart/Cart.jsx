@@ -6,13 +6,18 @@ import v from "../../imgs/vector.png";
 import Navbar from "../Navbar/Navbar";
 import Footer from "../Footer/Footer";
 import { cartContext } from "../../Context/CartContext";
-import { NavLink } from "react-router-dom";
+import { Link, NavLink, useNavigate } from "react-router-dom";
 import { favContext } from "../../Context/FavContext";
 
 const Cart = () => {
   const { addProductToFav } = useContext(favContext);
   const { cart, getCart, deleteCartProduct, changeProductCount } =
     useContext(cartContext);
+
+  const navigate = useNavigate();
+  const handleOrder = (e) => {
+    navigate("/order");
+  };
 
   useEffect(() => {
     getCart();
@@ -74,7 +79,7 @@ const Cart = () => {
             <div className="cartTP">
               <h2 className="cartTot">{cart.totalPrice}$</h2>
             </div>
-            <button className="cartBtn">
+            <button onClick={() => handleOrder()} className="cartBtn">
               Place an order <img src={v} />{" "}
             </button>
           </div>
