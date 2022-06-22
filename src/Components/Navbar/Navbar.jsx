@@ -1,9 +1,9 @@
-import React, { useContext } from "react";
+import React, { useContext, useEffect, useState } from "react";
 import cart from "../../imgs/cart.png";
 import user from "../../imgs/user.png";
 import logo from "../../imgs/logo.svg";
 import "./Navbar.css";
-import { NavLink } from "react-router-dom";
+import { NavLink, useLocation, useSearchParams } from "react-router-dom";
 import Header from "./Header";
 import { cartContext } from "../../Context/CartContext";
 import Avatar from '@mui/material/Avatar';
@@ -14,19 +14,25 @@ import Divider from '@mui/material/Divider';
 import Logout from '@mui/icons-material/Logout';
 import LoginIcon from '@mui/icons-material/Login';
 import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
+import { useProducts } from "../../Context/CrudContextProvider";
 
 
 
 const Navbar = (props) => {
   const { cartLength } = useContext(cartContext);
-  const [anchorEl, setAnchorEl] = React.useState(null);
+  const [anchorEl, setAnchorEl] = useState(null);
+
   const open = Boolean(anchorEl);
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
+  
   const handleClose = () => {
     setAnchorEl(null);
   };
+
+  const { searchFilter } = useProducts();
+
 
   if (props.location === "home") {
     return <Header />;
@@ -55,7 +61,11 @@ const Navbar = (props) => {
             className="navIcon search-inp"
             type="search"
             aria-label="Search"
+            onChange={(e) => 
+              console.log(searchFilter(e.target.value))}
           />
+
+          {}
 
           <NavLink to="/cart">
             <img className="navIcon" src={cart} alt="cart_icon" />

@@ -1,0 +1,18 @@
+.containerAdd{
+    width: 50%;
+    margin-left: 25%;
+    margin-right: 25%;
+    text-align: center;
+}
+
+.addForm{
+    display: block;
+}
+
+.inputAdd{
+    background-color: #f5ece3;
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+

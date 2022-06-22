@@ -1,51 +1,85 @@
-import React from "react";
-import { DataGrid } from '@mui/x-data-grid';
-import Footer from "../Footer/Footer";
+import React, { useEffect } from 'react';
+import { Box, Pagination} from '@mui/material';
+
 import Navbar from "../Navbar/Navbar";
+import Footer from "../Footer/Footer";
+import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
+import EditIcon from '@mui/icons-material/Edit';
 import "./AdminPanel.css"
-
-const columns = [
-  { field: 'id', headerName: 'ID', width: 50 },
-  { field: 'img', headerName: 'Image', width: 130 },
-  { field: 'title', headerName: 'Title', width: 130 },
-  {
-    field: 'price',
-    headerName: 'Price',
-    type: 'number',
-    width: 90,
-  },
-  { field: 'actions', headerName: 'Actions', width: 130 },
-
-];
-
-const rows = [
-  { id: 1, lastName: 'Snow', title: 'Jon', age: 35 },
-  { id: 2, lastName: 'Lannister', firstName: 'Cersei', age: 42 },
-  { id: 3, lastName: 'Lannister', firstName: 'Jaime', age: 45 },
-  { id: 4, lastName: 'Stark', firstName: 'Arya', age: 16 },
-  { id: 5, lastName: 'Targaryen', firstName: 'Daenerys', age: null },
-  { id: 6, lastName: 'Melisandre', firstName: null, age: 150 },
-  { id: 7, lastName: 'Clifford', firstName: 'Ferrara', age: 44 },
-  { id: 8, lastName: 'Frances', firstName: 'Rossini', age: 36 },
-  { id: 9, lastName: 'Roxie', firstName: 'Harvey', age: 65 },
-];
+import { useProducts } from '../../Context/CrudContextProvider';
+import { CardMedia } from '@mui/material';
+import { useSearchParams } from 'react-router-dom';
 
 const AdminPanel = () => {
-  return (<>
-  <Navbar/>
-  <div className="adminCont">
-    <div className="adminMain" style={{ height: '90vh', width: '80%' }}>
-      <DataGrid
-        rows={rows}
-        columns={columns}
-        pageSize={10}
-        rowsPerPageOptions={[5]}
-        checkboxSelection
-      />
+  const {deleteProduct, products, getProducts, page, setPage, count } = useProducts();
+  const [searchParams, ] = useSearchParams();
+
+  
+
+  useEffect(() => {
+    getProducts();
+    console.log(products, "prod");
+  }, []);
+
+  useEffect(() => {
+    getProducts();
+
+}, [page, searchParams]); 
+
+
+
+const handleChange = (e, p) => {
+    setPage(p)
+
+}
+
+
+  return (
+    <div>
+      <Navbar/>
+      <hr className="cartHR" />
+      <div className="cartMain">
+        <div className="cartTitles">
+          <h3 className="cartTitle">Admin panel</h3>
+          <span className="cartCount">2 products</span>
+        </div>
+        <div className="cartCards">
+        {products.map((item) => (
+                <div data-aos="flip-up" className="cartCard">
+                  <div className="cartImg">
+                  <CardMedia
+                    sx={{width: '100%'}}
+                      component="img"
+                      image={item.image}
+                      // alt={item.name}
+                    />
+                    {/* <img src={item.image} alt="" /> */}
+                  </div>
+                  <div className="cartInfo">
+                    <h1 className="cardTitle">{item.title}</h1>
+                    <p className='cardDesc'>{item.desc}</p>
+                  </div>
+                  <div className="iconsCart">
+                    <div className="x_cart"><EditIcon/><DeleteOutlineIcon onClick={()=>deleteProduct(item.id)}/></div>
+                    <span className="price_cart">{item.price}$</span>
+                  </div>
+                </div>
+                ))}
+          <hr className="cartHR2" />
+        </div>
+        </div>
+        <Box sx={{ textAlign: 'center' }}>
+                {products ? (
+
+            <Box my={3} display="flex" justifyContent="center">
+              <Pagination count={count} page={page} onChange={handleChange} />
+            </Box>
+            ) : ('')
+        }
+          </Box>
+      <Footer/>
     </div>
-    </div>
-    <Footer/>
-  </>);
+  );
 };
 
 export default AdminPanel;
