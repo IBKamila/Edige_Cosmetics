@@ -9,6 +9,8 @@ import butylka from "../../Media/butylka.png";
 import karandash from "../../Media/karandash.png";
 import umyvashka from "../../Media/umyvashka.png";
 import euro from "../../Media/euro.png";
+import str from "../../Media/str.png";
+import ruchka from "../../Media/ruchka.png";
 
 const Order = () => {
   return (
@@ -49,8 +51,8 @@ const Order = () => {
             <button className="btnstrelka1">
               <img src={strelkaL} alt="" />
             </button>
-
-            <button className="btnstrelka1">
+            {/* <span className="prd8">8 products</span> */}
+            <button className="btnstrelka2">
               <img src={strelkaR} alt="" />
             </button>
           </div>
@@ -65,9 +67,16 @@ const Order = () => {
             <img className="img_block" src={butylka} alt="1" />
             <img className="img_block" src={umyvashka} alt="3" />
           </div>
-          <div>
-            <h1>Total:</h1>
-            <img src={euro}></img>
+          <div className="eurotitle">
+            <h1 className="totalord">Total:</h1>
+            <img className="euro" src={euro}></img>
+          </div>
+          <button className="sendord">
+            Send your order <img src={str}></img>
+          </button>
+          <div className="editord">
+            <img src={ruchka} alt="edit" />
+            <span className="textedit">Edit this order</span>
           </div>
         </div>
       </div>
