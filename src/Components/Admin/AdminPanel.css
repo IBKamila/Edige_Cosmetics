@@ -1,18 +1,22 @@
-.adminCont{
-    margin: 0;
-    background-image: url(../../imgs/header.png);
+.adminCont {
+  margin: 0;
+  background-image: url(../../imgs/header.png);
 }
 
-.adminMain{
-    background-color: #eee4da7e;
-    margin-left: 10%;
-    margin-right: 10%;
+.adminMain {
+  background-color: #eee4da7e;
+  margin-left: 10%;
+  margin-right: 10%;
 }
 
-.cardDesc{
-    color: #555555;
-    font-weight: 400;
-    
+.cardDesc {
+  color: #555555;
+  font-weight: 400;
 }
 
-
+.adminAdd {
+  cursor: pointer;
+  border-radius: 36px;
+  background-color: #f5ece3;
+  height: 36px;
+}
