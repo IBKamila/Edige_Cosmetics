@@ -12,6 +12,7 @@ import SideBar from "../SiteBar/SiteBar";
 const ProductList = () => {
   const { products, getProducts, page, setPage, count } = useProducts();
   const [searchParams] = useSearchParams();
+  console.log(products, "products");
   const filterProducts = products.filter(
     (product) => product.category != "Аксессуары и PRO"
   );

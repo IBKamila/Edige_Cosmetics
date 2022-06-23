@@ -110,17 +110,22 @@ const CrudContextProvider = ({ children }) => {
     };
     let newProduct2 = new FormData();
     newProduct2.append("title", newProduct.title);
+    // newProduct2.append("id", newProduct.id);
     newProduct2.append("description", newProduct.description);
     newProduct2.append("category", newProduct.category);
     newProduct2.append("price", newProduct.price);
-    if (typeof newProduct.image !== "string") {
-      newProduct2.append("image", newProduct.image);
-    }
+    // if (typeof newProduct.image !== "string") {
+    //   newProduct2.append("image", newProduct.image);
+    // }
     console.log(newProduct2, "new");
 
     let id = newProduct2.get("id");
 
-    await axios.patch(`${API}products/update/${id}/`, newProduct2, config);
+    await axios.patch(
+      `${API}products/update/${newProduct.id}/`,
+      newProduct2,
+      config
+    );
     getProducts();
     navigate("/admin");
   };
@@ -133,7 +138,7 @@ const CrudContextProvider = ({ children }) => {
 
       dispatch({
         type: "GET_PRODUCTS",
-        payload: data,
+        payload: data.results,
       });
     }
   };
@@ -143,7 +148,7 @@ const CrudContextProvider = ({ children }) => {
 
     dispatch({
       type: "GET_PRODUCTS",
-      payload: data,
+      payload: data.results,
     });
   };
 
