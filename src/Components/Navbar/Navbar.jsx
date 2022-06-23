@@ -7,18 +7,21 @@ import "./Navbar.css";
 import { NavLink, useLocation, useSearchParams } from "react-router-dom";
 import Header from "./Header";
 import { cartContext } from "../../Context/CartContext";
-import Avatar from '@mui/material/Avatar';
-import Menu from '@mui/material/Menu';
-import MenuItem from '@mui/material/MenuItem';
-import ListItemIcon from '@mui/material/ListItemIcon';
-import Divider from '@mui/material/Divider';
-import Logout from '@mui/icons-material/Logout';
-import LoginIcon from '@mui/icons-material/Login';
-import AssignmentIndOutlinedIcon from '@mui/icons-material/AssignmentIndOutlined';
+import Avatar from "@mui/material/Avatar";
+import Menu from "@mui/material/Menu";
+import MenuItem from "@mui/material/MenuItem";
+import ListItemIcon from "@mui/material/ListItemIcon";
+import Divider from "@mui/material/Divider";
+import Logout from "@mui/icons-material/Logout";
+import LoginIcon from "@mui/icons-material/Login";
+import AssignmentIndOutlinedIcon from "@mui/icons-material/AssignmentIndOutlined";
 import { useProducts } from "../../Context/CrudContextProvider";
-
+import { ADMIN } from "../../helpers/consts";
+import { useAuth } from "../../Context/AuthContext";
 
 const Navbar = (props) => {
+  const { userName, logout, checkAuth } = useAuth();
+
   const { cartLength } = useContext(cartContext);
   const [anchorEl, setAnchorEl] = useState(null);
 
@@ -26,13 +29,12 @@ const Navbar = (props) => {
   const handleClick = (event) => {
     setAnchorEl(event.currentTarget);
   };
-  
+
   const handleClose = () => {
     setAnchorEl(null);
   };
 
   const { searchFilter } = useProducts();
-
 
   if (props.location === "home") {
     return <Header />;
@@ -63,8 +65,7 @@ const Navbar = (props) => {
             className="navIcon search-inp"
             type="search"
             aria-label="Search"
-            onChange={(e) => 
-              console.log(searchFilter(e.target.value))}
+            onChange={(e) => console.log(searchFilter(e.target.value))}
             id="search"
           />
 
@@ -118,25 +119,32 @@ const Navbar = (props) => {
             transformOrigin={{ horizontal: "right", vertical: "top" }}
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
           >
-            <MenuItem>
-              <Avatar /> Profile
-            </MenuItem>
-            <MenuItem>
-              <Avatar /> My account
-            </MenuItem>
+            {userName == ADMIN ? (
+              <NavLink to="/admin">
+                <MenuItem>
+                  <Avatar /> Admin
+                </MenuItem>
+              </NavLink>
+            ) : (
+              ""
+            )}
             <Divider />
-            <MenuItem>
-              <ListItemIcon>
-                <LoginIcon fontSize="small" />
-              </ListItemIcon>
-              Login
-            </MenuItem>
-            <MenuItem>
-              <ListItemIcon>
-                <AssignmentIndOutlinedIcon fontSize="small" />
-              </ListItemIcon>
-              Sign In
-            </MenuItem>
+            <NavLink to="/auth">
+              <MenuItem>
+                <ListItemIcon>
+                  <LoginIcon fontSize="small" />
+                </ListItemIcon>
+                Login
+              </MenuItem>
+            </NavLink>
+            <NavLink to="/registr">
+              <MenuItem>
+                <ListItemIcon>
+                  <AssignmentIndOutlinedIcon fontSize="small" />
+                </ListItemIcon>
+                Sign In
+              </MenuItem>
+            </NavLink>
             <MenuItem>
               <ListItemIcon>
                 <Logout fontSize="small" />

@@ -1,119 +1,133 @@
-// import { TextField } from "@mui/material";
-// import React, { useContext, useEffect, useState } from "react";
-// import { useNavigate, useParams } from "react-router-dom";
-// import { productContext } from "../../Context/ProductContext";
+import React, { useContext, useEffect, useState } from "react";
+import { useNavigate, useParams } from "react-router-dom";
+import { useProducts } from "../../Context/CrudContextProvider";
+import {
+  Box,
+  Button,
+  FormControl,
+  InputLabel,
+  MenuItem,
+  Select,
+  TextField,
+} from "@mui/material";
 
-// const EditProduct = () => {
-//   const { productDetails, getProductsDetails, editProduct } =
-//     useContext(productContext);
+const EditProduct = () => {
+  const { getProductDetails, productDetails, saveEditedProduct } =
+    useProducts();
+  const { id } = useParams();
+  const navigate = useNavigate();
+  const [product, setProduct] = useState(productDetails);
 
-//   let { id } = useParams();
+  useEffect(() => {
+    setProduct(productDetails);
+  }, [productDetails]);
 
-//   const navigate = useNavigate();
+  useEffect(() => {
+    getProductDetails(id);
+  }, []);
 
-//   useEffect(() => {
-//     getProductsDetails(id);
-//   }, []);
+  const handleInp = (e) => {
+    let obj = {
+      ...product,
+      [e.target.name]: e.target.value,
+    };
+    setProduct(obj);
+  };
+  const handleInpFile = (e) => {
+    let file = e.target.files[0];
+    console.log(file);
+    setProduct({
+      ...product,
+      image: file,
+    });
+  };
 
-//   const [inpValues, setInpValues] = useState(productDetails);
+  return (
+    <>
+      <div className="containerAdd">
+        <h1 className="titulAdd">Product edit</h1>
+        <div className="addForm">
+          <TextField
+            sx={{ marginBottom: "20px" }}
+            className="inputAdd"
+            id="standard-basic"
+            variant="standard"
+            name="title"
+            value={product.title || ""}
+            onChange={(e) => {
+              handleInp(e);
+            }}
+          />
+          <TextField
+            sx={{ marginBottom: "20px" }}
+            className="inputAdd"
+            id="standard-basic"
+            label="Description"
+            variant="standard"
+            value={product.description || ""}
+            name="description"
+            onChange={(e) => {
+              handleInp(e);
+            }}
+          />
+          <FormControl fullWidth size="small" sx={{ borderColor: "black" }}>
+            <InputLabel
+              value={product.category || ""}
+              id="demo-simple-select-label"
+              onChange={(e) => {
+                handleInp(e);
+              }}
+            >
+              Category
+            </InputLabel>
+            <Select
+              sx={{ marginBottom: "20px" }}
+              labelId="demo-simple-select-label"
+              id="demo-simple-select"
+              name="category"
 
-//   const handleChange = (e) => {
-//     let obj = {
-//       ...inpValues,
-//       [e.target.name]: e.target.value,
-//     };
-//     setInpValues(obj);
-//   };
+              //   onChange={(e)=>{handleInp(e)}
+              //   }
+            >
+              <MenuItem value={"Care"}>Care</MenuItem>
+              <MenuItem value={"Decor"}>Decor</MenuItem>
+              <MenuItem value={"Eyebrow"}>Eyebrow</MenuItem>
+              <MenuItem value={"accessories"}>Accessories</MenuItem>
+            </Select>
+          </FormControl>
+          <TextField
+            sx={{ marginBottom: "20px" }}
+            className="inputAdd"
+            id="standard-basic"
+            label="Price"
+            value={product.price || ""}
+            type="number"
+            variant="standard"
+            name="price"
+            onChange={(e) => {
+              handleInp(e);
+            }}
+          />
+          <TextField
+            className="inputAdd"
+            sx={{ marginBottom: "10px" }}
+            fullWidth
+            id="outlined-helperText"
+            helperText="insert picture"
+            name="image"
+            size="small"
+            onChange={(e) => {
+              handleInpFile(e);
+            }}
+            type="file"
+          />
+        </div>
+        <button className="save-btn" onClick={() => saveEditedProduct(product)}>
+          Save
+        </button>
+      </div>
+    </>
+  );
+};
 
-//   const handleSave = (e) => {
-//     // e.preventDefault();
-//     editProduct(id, inpValues);
-//     navigate("/list");
-//   };
-
-//   return (
-//     <div className="containerAdd">
-//       <h1 className="titulAdd">Product edit</h1>
-//       <form className="siteBar-inputs" onSubmit={(e) => handleSave(e)}>
-//         <TextField
-//           className="inputAdd"
-//           id="standard-basic"
-//           label="Title"
-//           variant="standard"
-//           value={inpValues.title}
-//           name="title"
-//           onChange={(e) => handleChange(e)}
-//         />
-//         <TextField
-//           className="input1Add"
-//           id="standard-basic"
-//           label="Description"
-//           variant="standard"
-//           value={inpValues.description}
-//           name="description"
-//           onChange={(e) => handleChange(e)}
-//         />
-//         <TextField
-//           className="input2Add"
-//           id="standard-basic"
-//           label="Price"
-//           type="number"
-//           variant="standard"
-//           value={inpValues.price}
-//           name="price"
-//           onChange={(e) => handleChange(e)}
-//         />
-//         <TextField
-//           className="input3Add"
-//           id="standard-basic"
-//           label="Category"
-//           variant="standard"
-//           value={inpValues.category}
-//           name="category"
-//           onChange={(e) => handleChange(e)}
-//         />
-//         <TextField
-//           className="input4Add"
-//           id="standard-basic"
-//           label="img1"
-//           variant="standard"
-//           value={inpValues.img1}
-//           name="img1"
-//           onChange={(e) => handleChange(e)}
-//         />
-//         <TextField
-//           className="input5Add"
-//           id="standard-basic"
-//           label="img2"
-//           variant="standard"
-//           value={inpValues.img2}
-//           name="img2"
-//           onChange={(e) => handleChange(e)}
-//         />
-//         <TextField
-//           className="input6Add"
-//           id="standard-basic"
-//           label="img3"
-//           variant="standard"
-//           value={inpValues.img3}
-//           name="img3"
-//           onChange={(e) => handleChange(e)}
-//         />
-//         <TextField
-//           className="input7Add"
-//           id="standard-basic"
-//           label="img4"
-//           variant="standard"
-//           value={inpValues.img4}
-//           name="img4"
-//           onChange={(e) => handleChange(e)}
-//         />
-//         <button className="save-btn" onClick={() => handleSave(inpValues)}>
-//           Save changes
-//         </button>
-//       </form>
-//     </div>
-//   );
-// };
-
-// export default EditProduct;
+export default EditProduct;
