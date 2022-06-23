@@ -29,38 +29,40 @@ const Registration = () => {
           If this is your first time on the site, then you should fill out a
           questionnaire so that we can keep a history of your orders
         </h2>
-        <TextField
-          className="input"
-          id="standard-basic"
-          label="Your Name"
-          variant="standard"
-          onChange={(e) => setName(e.target.value)}
-          value={name}
-        />
-        <TextField
-          className="input1"
-          id="standard-basic"
-          label="Your E-Mail"
-          variant="standard"
-          onChange={(e) => setEmail(e.target.value)}
-          value={email}
-        />
-        <TextField
-          className="input2"
-          id="standard-basic"
-          label="Password"
-          variant="standard"
-          onChange={(e) => setPassword(e.target.value)}
-          value={password}
-        />
-        <TextField
-          className="input3"
-          id="standard-basic"
-          label="Password confirm"
-          variant="standard"
-          onChange={(e) => setPasswordConfirm(e.target.value)}
-          value={passwordConfirm}
-        />
+        <div className="textField">
+          <TextField
+            className="input"
+            id="standard-basic"
+            label="Your Name"
+            variant="standard"
+            onChange={(e) => setName(e.target.value)}
+            value={name}
+          />
+          <TextField
+            className="input1"
+            id="standard-basic"
+            label="Your E-Mail"
+            variant="standard"
+            onChange={(e) => setEmail(e.target.value)}
+            value={email}
+          />
+          <TextField
+            className="input2"
+            id="standard-basic"
+            label="Password"
+            variant="standard"
+            onChange={(e) => setPassword(e.target.value)}
+            value={password}
+          />
+          <TextField
+            className="input3"
+            id="standard-basic"
+            label="Password confirm"
+            variant="standard"
+            onChange={(e) => setPasswordConfirm(e.target.value)}
+            value={passwordConfirm}
+          />
+        </div>
         <button className="btn" onClick={() => handleRegister(email, password)}>
           Сomplete registration
         </button>

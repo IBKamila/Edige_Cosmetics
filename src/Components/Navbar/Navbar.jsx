@@ -119,15 +119,12 @@ const Navbar = (props) => {
             transformOrigin={{ horizontal: "right", vertical: "top" }}
             anchorOrigin={{ horizontal: "right", vertical: "bottom" }}
           >
-            {userName == ADMIN ? (
-              <NavLink to="/admin">
-                <MenuItem>
-                  <Avatar /> Admin
-                </MenuItem>
-              </NavLink>
-            ) : (
-              ""
-            )}
+            <NavLink to="/admin">
+              <MenuItem>
+                <Avatar /> Admin
+              </MenuItem>
+            </NavLink>
+
             <Divider />
             <NavLink to="/auth">
               <MenuItem>
